@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/page.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastAvto</title>
-</head>
-<body>
+{% extends "cars/base.html" %}
+{% load static %}
+
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/page.css' %}">
+    {% endblock %}
+
+    {% block header %}
     <header class="cars-header">
         <h2 class="logo">FastAvto</h2>
-        <button class="back-button" onclick="window.location.href='index.html'">
-            ← На главную
+        <button>
+            <a class="back-button" href="{% url 'index' %}">← На главную</a>
         </button>
     </header>
+    {% endblock %}
 
+    {% block content %}
     <div class="image-container">
         <div class="item">
             <div class="card">
@@ -87,7 +89,9 @@
             </div>
         </div>
     </div>
+    {% endblock %}
 
+    {% block contentJs %}
     <!-- Модальное окно -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
@@ -114,7 +118,8 @@
             </form>
         </div>
     </div>
+    {% endblock %}
 
-    <script src="script.js"></script>
-</body>
-</html>
+    {% block js %}
+    <script src="{% static 'js/page.js' %}"></script>
+    {% endblock %}

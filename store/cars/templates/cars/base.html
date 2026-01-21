@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% block css %} {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAvto</title>
+</head>
+<body>
+
+    {% block header %} {% endblock %}
+
+    {% block img %} {% endblock %}
+
+    {% block content %} {% endblock %}
+
+    {% block contentJs %} {% endblock %}
+
+    {% block js %} {% endblock %}
+    <footer>
+        <p>Телефон: +7 (999) 123-45-67</p>
+    </footer>
+</body>
+</html>

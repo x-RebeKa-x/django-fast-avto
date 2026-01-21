@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/page_start.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastAvto - Главная</title>
-</head>
-<body>
+{% extends "cars/base.html" %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/page_start.css' %}">
+    {% endblock %}
+
+    {% block img %}
     <div class="background-image">
         <img src="https://static2.banki.ru/ugc/93/98/b3/a4/10997283.jpg" alt="Автомобили">
         <div class="overlay"></div>
     </div>
-    
+    {% endblock %}
+
+    {% block content %}
     <div class="content">
         <header>
             <h1 class="logo">FastAvto</h1>
             <p class="tagline">Быстро. Надежно. Удобно.</p>
         </header>
-        
+
         <main>
             <div class="info-box">
                 <p>Этот сервис предназначен для быстрого бронирования автомобиля. Здесь есть большой ассортимент машин разных марок, от эконом-класса до премиум-сегмента. Мы гарантируем лучшие цены и качественный сервис.</p>
@@ -42,16 +43,11 @@
                 </div>
             </div>
             
-            <button class="cta-button" onclick="window.location.href='page.html'">
-                Посмотреть машины
-                <span class="arrow">→</span>
+            <button>
+                <a class="cta-button" href="{% url 'cars' %}">
+                    Посмотреть машины
+                </a>
             </button>
         </main>
-        
-        <footer>
-            <!-- <p>© 2024 FastAvto. Все права защищены.</p> -->
-            <!-- <p>Телефон: +7 (999) 123-45-67</p> -->
-        </footer>
     </div>
-</body>
-</html>
+    {% endblock %}

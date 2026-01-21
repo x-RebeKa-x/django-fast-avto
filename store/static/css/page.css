@@ -280,7 +280,6 @@ header {
     transform: translateX(-5px);
 }
 
-/* Стили для карточек автомобилей */
 .image-container {
     padding: 40px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
