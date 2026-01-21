@@ -17,10 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from cars.views import index, cars
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('cars/', cars, name='cars'),
 ]
