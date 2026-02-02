@@ -25,7 +25,8 @@ from cars.views import index, cars
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('cars/', include('cars.urls', namespace='cars'))
+    path('cars/', include('cars.urls', namespace='cars')),
+    path('users/', include('users.urls', namespace='users'))
 ]
 
 if settings.DEBUG:
