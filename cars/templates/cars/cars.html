@@ -2,68 +2,88 @@
 {% load static %}
 
 
-    {% block css %}
-        <link rel="stylesheet" href="{% static 'css/page.css' %}">
-    {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/page.css' %}">
+{% endblock %}
 
-    {% block header %}
-    <header class="cars-header">
-        <h2 class="logo">FastAvto</h2>
-        <button>
-            <a class="back-button" href="{% url 'index' %}">← На главную</a>
-        </button>
-    </header>
-    {% endblock %}
+{% block header %}
+<header class="cars-header">
+    <h2 class="logo">FastAvto</h2>
+    <button>
+        <a class="back-button" href="{% url 'index' %}">← На главную</a>
+    </button>
+</header>
+{% endblock %}
 
-    {% block content %}
-
-    {{ cars }}
-    <div class="image-container">
-        {% for car in cars %}
-            <div class="item">
-                <div class="card">
-                    <img src="/media/{{ car.image }}" alt="Kia Rio">
-                    <div class="info">
-                        <h3>{{ car.name }}</h3>
-                        <p class="description">{{ car.description }}</p>
-                        <p class="price">{{ car.price }} ₽/день</p>
-                    </div>
-                    <button class="book-btn">Забронировать</button>
-                </div>
-            </div>
-        {% endfor %}
+{% block contentCategories %}
+<div class="widget-header">
+    <div class="widget-header">
+        <h3><i class="fas fa-filter"></i> Категории</h3>
     </div>
-    {% endblock %}
 
-    {% block contentJs %}
-    <!-- Модальное окно -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Бронирование автомобиля</h2>
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label for="carModel">Автомобиль:</label>
-                    <input type="text" id="carModel" readonly>
+    <div class="widget-body">
+        <div class="category-table">
+<!--            Этот for предназначен для отображения таблички с категориями-->
+            {% for category in categories %}
+            <a href="" class="table-row economy-row">
+                <div class="row-content">
+                    <span class="row-title">{{ category.name }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="address">Адрес получения:</label>
-                    <input type="text" id="address" placeholder="Введите адрес" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Дата получения:</label>
-                    <input type="date" id="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Время получения:</label>
-                    <input type="time" id="time" required>
-                </div>
-                <button type="submit" class="submit-btn">Подтвердить бронирование</button>
-            </form>
+            </a>
+            {% endfor %}
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block js %}
-    <script src="{% static 'js/page.js' %}"></script>
-    {% endblock %}
+{% block content %}
+<div class="image-container">
+<!--    Этот for предназначен для отображения всех карточек товара-->
+    {% for car in cars %}
+    <div class="item">
+        <div class="card">
+            <img src="/media/{{ car.image }}" alt="Kia Rio">
+            <div class="info">
+                <h3>{{ car.name }}</h3>
+                <p class="description">{{ car.description }}</p>
+                <p class="price">{{ car.price }} ₽/день</p>
+            </div>
+            <button class="book-btn">Забронировать</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+<!--Этот блок для бронирования после нажатия кнопки-->
+{% block contentJs %}
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Бронирование автомобиля</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="carModel">Автомобиль:</label>
+                <input type="text" id="carModel" readonly>
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес получения:</label>
+                <input type="text" id="address" placeholder="Введите адрес" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Дата получения:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Время получения:</label>
+                <input type="time" id="time" required>
+            </div>
+            <button type="submit" class="submit-btn">Подтвердить бронирование</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/page.js' %}"></script>
+{% endblock %}

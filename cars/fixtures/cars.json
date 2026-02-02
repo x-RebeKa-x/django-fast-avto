@@ -178,5 +178,44 @@
     "quantity": 1,
     "category": 2
   }
+},
+{
+  "model": "cars.car",
+  "pk": 16,
+  "fields": {
+    "name": "Jaguar XKR-S",
+    "image": "cars/foni-papik-pro-rbrb-p-kartinki-avto-na-prozrachnom-fone-19.png",
+    "description": "Эффектное спорткупе с мощным двигателем. Идеален для острых ощущений",
+    "short_description": "",
+    "price": "3500.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 17,
+  "fields": {
+    "name": "AMG G 63 (Гелик)",
+    "image": "cars/png-klev-club-2aqp-p-belii-gelik-png-2.png",
+    "description": "Брутальный внедорожник с исключительными характеристиками. Идеален для демонстрации статуса",
+    "short_description": "",
+    "price": "4300.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 18,
+  "fields": {
+    "name": "Daewoo Matiz",
+    "image": "cars/png-klev-club-2vpo-p-matiz-png-3.png",
+    "description": "Компактный хэтчбек с экономичным расходом топлива. Идеален для города",
+    "short_description": "",
+    "price": "1000.00",
+    "quantity": 1,
+    "category": 2
+  }
 }
 ]
