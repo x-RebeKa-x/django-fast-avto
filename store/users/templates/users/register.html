@@ -1,0 +1,107 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="register-wrapper">
+    <div class="register-box">
+        <div class="register-header">
+            <div class="logo">FastAvto</div>
+            <h1>Создать аккаунт</h1>
+            <p class="welcome-text">Зарегистрируйтесь для бронирования автомобилей</p>
+        </div>
+
+        <form id="registerForm" class="register-form">
+            <div id="errorMessage" class="message error-message"></div>
+            <div id="successMessage" class="message success-message"></div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Имя пользователя"
+                            required
+                            autocomplete="username"
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="Имя"
+                                required
+                                autocomplete="given-name"
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                placeholder="Фамилия"
+                                required
+                                autocomplete="family-name"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Пароль"
+                            required
+                            autocomplete="new-password"
+                    >
+                </div>
+                <div class="password-strength" id="passwordStrength">
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Подтвердите пароль"
+                            required
+                            autocomplete="new-password"
+                    >
+                </div>
+                <div class="password-match" id="passwordMatch">
+                    <span class="match-text"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="register-button">
+                Зарегистрироваться
+            </button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

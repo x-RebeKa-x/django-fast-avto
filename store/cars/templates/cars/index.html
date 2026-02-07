@@ -1,53 +1,53 @@
 {% extends "cars/base.html" %}
 {% load static %}
 
-    {% block css %}
-        <link rel="stylesheet" href="{% static 'css/page_start.css' %}">
-    {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/page_start.css' %}">
+{% endblock %}
 
-    {% block img %}
-    <div class="background-image">
-        <img src="https://static2.banki.ru/ugc/93/98/b3/a4/10997283.jpg" alt="Автомобили">
-        <div class="overlay"></div>
-    </div>
-    {% endblock %}
+{% block img %}
+<div class="background-image">
+    <img src="https://static2.banki.ru/ugc/93/98/b3/a4/10997283.jpg" alt="Автомобили">
+    <div class="overlay"></div>
+</div>
+{% endblock %}
 
-    {% block content %}
-    <div class="content">
-        <header>
-            <h1 class="logo">FastAvto</h1>
-            <p class="tagline">Быстро. Надежно. Удобно.</p>
-        </header>
+{% block content %}
+<div class="content">
+    <header>
+        <h1 class="logo">FastAvto</h1>
+        <p class="tagline">Быстро. Надежно. Удобно.</p>
+    </header>
 
-        <main>
-            <div class="info-box">
-                <p>Этот сервис предназначен для быстрого бронирования автомобиля. Здесь есть большой ассортимент машин разных марок, от эконом-класса до премиум-сегмента. Мы гарантируем лучшие цены и качественный сервис.</p>
-                
-                <div class="features">
-                    <div class="feature">
-                        <span>🚗</span>
-                        <p>100+ моделей</p>
-                    </div>
-                    <div class="feature">
-                        <span>💰</span>
-                        <p>Лучшие цены</p>
-                    </div>
-                    <div class="feature">
-                        <span>⏱️</span>
-                        <p>Быстрое оформление</p>
-                    </div>
-                    <div class="feature">
-                        <span>⭐</span>
-                        <p>Высокий рейтинг</p>
-                    </div>
+    <main>
+        <div class="info-box">
+            <p>Этот сервис предназначен для быстрого бронирования автомобиля. Здесь есть большой ассортимент машин
+                разных марок, от эконом-класса до премиум-сегмента. Мы гарантируем лучшие цены и качественный
+                сервис.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <span>🚗</span>
+                    <p>100+ моделей</p>
+                </div>
+                <div class="feature">
+                    <span>💰</span>
+                    <p>Лучшие цены</p>
+                </div>
+                <div class="feature">
+                    <span>⏱️</span>
+                    <p>Быстрое оформление</p>
+                </div>
+                <div class="feature">
+                    <span>⭐</span>
+                    <p>Высокий рейтинг</p>
                 </div>
             </div>
-            
-            <button>
-                <a class="cta-button" href="{% url 'cars' %}">
-                    Посмотреть машины
-                </a>
-            </button>
-        </main>
-    </div>
-    {% endblock %}
+        </div>
+
+        <a class="cta-button" href="{% url 'cars:index' %}">
+            Посмотреть машины
+        </a>
+    </main>
+</div>
+{% endblock %}

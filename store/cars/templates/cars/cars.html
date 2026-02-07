@@ -2,124 +2,89 @@
 {% load static %}
 
 
-    {% block css %}
-        <link rel="stylesheet" href="{% static 'css/page.css' %}">
-    {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/page.css' %}">
+{% endblock %}
 
-    {% block header %}
-    <header class="cars-header">
-        <h2 class="logo">FastAvto</h2>
-        <button>
+{% block header %}
+<header class="cars-header">
+    <h2 class="logo">FastAvto</h2>
+        <div class="header-buttons">
             <a class="back-button" href="{% url 'index' %}">← На главную</a>
-        </button>
-    </header>
-    {% endblock %}
-
-    {% block content %}
-    <div class="image-container">
-        <div class="item">
-            <div class="card">
-                <img src="https://www.kia-favorit.ru/upload/iblock/cfb/cfb31e92025670882f654f18fa18feb6.jpg" alt="Kia Rio">
-                <div class="info">
-                    <h3>Kia Rio</h3>
-                    <p class="description">Компактный седан с экономичным расходом топлива. Идеален для города.</p>
-                    <p class="price">1,200 ₽/день</p>
-                </div>
-                <button class="book-btn">Забронировать</button>
-            </div>
+            <a class="back-button" href="{% url 'users:login' %}">Профиль</a>
         </div>
+</header>
+{% endblock %}
 
-        <div class="item">
-            <div class="card">
-                <img src="https://www.masmotors.ru/resources/models/575/colors/color/2_600x310.webp" alt="Hyundai Solaris">
-                <div class="info">
-                    <h3>Hyundai Solaris</h3>
-                    <p class="description">Надежный автомобиль с комфортным салоном и современной мультимедиа.</p>
-                    <p class="price">1,350 ₽/день</p>
-                </div>
-                <button class="book-btn">Забронировать</button>
-            </div>
-        </div>
+{% block contentCategories %}
+<div class="widget-header">
+    <div class="widget-header">
+        <h3><i class="fas fa-filter"></i> Категории</h3>
+    </div>
 
-        <div class="item">
-            <div class="card">
-                <img src="https://s.auto.drom.ru/i24207/c/photos/fullsize/toyota/c-hr/toyota_c-hr_700063.jpg" alt="Toyota C-HR">
-                <div class="info">
-                    <h3>Toyota C-HR</h3>
-                    <p class="description">Кроссовер с ярким дизайном и отличной управляемостью. Премиум-класс.</p>
-                    <p class="price">2,800 ₽/день</p>
+    <div class="widget-body">
+        <div class="category-table">
+<!--            Этот for предназначен для отображения таблички с категориями-->
+            {% for category in categories %}
+            <a href="" class="table-row economy-row">
+                <div class="row-content">
+                    <span class="row-title">{{ category.name }}</span>
                 </div>
-                <button class="book-btn">Забронировать</button>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card">
-                <img src="https://i.pinimg.com/originals/64/2a/dd/642add34d47c22768557f9e42a3e615e.png" alt="Kia Rio">
-                <div class="info">
-                    <h3>Mercedes</h3>
-                    <p class="description">Полная комплектация, кожаный салон, климат-контроль.</p>
-                    <p class="price">2,500 ₽/день</p>
-                </div>
-                <button class="book-btn">Забронировать</button>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card">
-                <img src="https://avatars.mds.yandex.net/get-yapic/32838/enc-498a8c9e14940c788ccf1ff4397cb2add4244a9ff2dd625fc99e2cbf3aa36589/orig" alt="Kia Rio">
-                <div class="info">
-                    <h3>Mercedes-Benz</h3>
-                    <p class="description">Базовая комплектация, кондиционер, подушки безопасности.</p>
-                    <p class="price">1,500 ₽/день</p>
-                </div>
-                <button class="book-btn">Забронировать</button>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="card">
-                <img src="https://avatars.mds.yandex.net/i?id=7b7f9a75bb549d16bc036908da8af43744274148-5273845-images-thumbs&n=13" alt="Kia Rio">
-                <div class="info">
-                    <h3>Nissan</h3>
-                    <p class="description">Для деловых поездок, дополнительное оборудование для комфорта.</p>
-                    <p class="price">1,400 ₽/день</p>
-                </div>
-                <button class="book-btn">Забронировать</button>
-            </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block contentJs %}
-    <!-- Модальное окно -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Бронирование автомобиля</h2>
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label for="carModel">Автомобиль:</label>
-                    <input type="text" id="carModel" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="address">Адрес получения:</label>
-                    <input type="text" id="address" placeholder="Введите адрес" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Дата получения:</label>
-                    <input type="date" id="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Время получения:</label>
-                    <input type="time" id="time" required>
-                </div>
-                <button type="submit" class="submit-btn">Подтвердить бронирование</button>
-            </form>
+{% block content %}
+<div class="image-container">
+<!--    Этот for предназначен для отображения всех карточек товара-->
+    {% for car in cars %}
+    <div class="item">
+        <div class="card">
+            <img src="/media/{{ car.image }}" alt="Kia Rio">
+            <div class="info">
+                <h3>{{ car.name }}</h3>
+                <p class="description">{{ car.description }}</p>
+                <p class="price">{{ car.price }} ₽/день</p>
+            </div>
+            <button class="book-btn">Забронировать</button>
         </div>
     </div>
-    {% endblock %}
+    {% endfor %}
+</div>
+{% endblock %}
 
-    {% block js %}
-    <script src="{% static 'js/page.js' %}"></script>
-    {% endblock %}
+<!--Этот блок для бронирования после нажатия кнопки-->
+{% block contentJs %}
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Бронирование автомобиля</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="carModel">Автомобиль:</label>
+                <input type="text" id="carModel" readonly>
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес получения:</label>
+                <input type="text" id="address" placeholder="Введите адрес" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Дата получения:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Время получения:</label>
+                <input type="time" id="time" required>
+            </div>
+            <button type="submit" class="submit-btn">Подтвердить бронирование</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/page.js' %}"></script>
+{% endblock %}

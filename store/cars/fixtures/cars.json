@@ -1,0 +1,221 @@
+[
+{
+  "model": "cars.carcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Эконом",
+    "description": ""
+  }
+},
+{
+  "model": "cars.carcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Кофорт",
+    "description": ""
+  }
+},
+{
+  "model": "cars.carcategory",
+  "pk": 5,
+  "fields": {
+    "name": "Премиум",
+    "description": ""
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 4,
+  "fields": {
+    "name": "Kia Rio",
+    "image": "cars/cfb31e92025670882f654f18fa18feb6_sGq2eJT.jpg",
+    "description": "Компактный седан с экономичным расходом топлива. Идеален для города",
+    "short_description": "",
+    "price": "1200.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 5,
+  "fields": {
+    "name": "Mercedes",
+    "image": "cars/642add34d47c22768557f9e42a3e615e_ieBgPix.png",
+    "description": "Полная комплектация, кожаный салон, климат-контроль",
+    "short_description": "",
+    "price": "2500.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 6,
+  "fields": {
+    "name": "Audi S4",
+    "image": "cars/1643705319_14-hdpic-club-p-mashini-na-belom-fone-19.png",
+    "description": "Спортивный премиум-седан с динамичным характером и изысканным салоном",
+    "short_description": "",
+    "price": "4000.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 7,
+  "fields": {
+    "name": "Ferrari 612 Scaglietti",
+    "image": "cars/1643705348_8-hdpic-club-p-mashini-na-belom-fone-10.jpg",
+    "description": "Роскошное спортивное купе 2+2 с мощным V12 и исключительным комфортом",
+    "short_description": "",
+    "price": "5000.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 8,
+  "fields": {
+    "name": "Mazda MX-5",
+    "image": "cars/1643705360_29-hdpic-club-p-mashini-na-belom-fone-42.jpg",
+    "description": "Компактный спортивный родстер с отличной управляемостью, но без просторного салона.",
+    "short_description": "",
+    "price": "2500.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 9,
+  "fields": {
+    "name": "BMW M6",
+    "image": "cars/1643705386_4-hdpic-club-p-mashini-na-belom-fone-6.png",
+    "description": "Мощное премиум-купе с атмосферным V10, не для экономичной городской езды.",
+    "short_description": "",
+    "price": "3500.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 10,
+  "fields": {
+    "name": "Jaguar XJ",
+    "image": "cars/1643705399_10-hdpic-club-p-mashini-na-belom-fone-15.png",
+    "description": "Полноразмерный роскошный седан представительского класса с мощным двигателем V8.",
+    "short_description": "",
+    "price": "3200.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 11,
+  "fields": {
+    "name": "Nissan GT-R",
+    "image": "cars/1643705419_35-hdpic-club-p-mashini-na-belom-fone-52.jpg",
+    "description": "Полноприводное спортивное купе с феноменальной динамикой и функциональным салоном.",
+    "short_description": "",
+    "price": "4200.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 12,
+  "fields": {
+    "name": "Audi TT",
+    "image": "cars/1691940018_grizly-club-p-kartinki-krasnaya-mashina-bez-fona-1.png",
+    "description": "Компактное спортивное купе с экономичным расходом топлива. Идеален для города.",
+    "short_description": "",
+    "price": "2000.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 13,
+  "fields": {
+    "name": "Xcite X-Cross 7",
+    "image": "cars/Article_176477_860_575.jpg",
+    "description": "Компактный городской кроссовер с экономичным расходом топлива.",
+    "short_description": "",
+    "price": "2600.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 14,
+  "fields": {
+    "name": "Ford Mustang V",
+    "image": "cars/ch-rnaya-mashina-na-belom-fone.jpg",
+    "description": "Культовый американский маслкар с мощным двигателем и просторным салоном.",
+    "short_description": "",
+    "price": "4600.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 15,
+  "fields": {
+    "name": "Mercedes-Benz",
+    "image": "cars/foni-papik-pro-r3yl-p-kartinki-avto-na-prozrachnom-fone-4.png",
+    "description": "Роскошное премиум-купе с индивидуальным тюнингом и просторным салоном.",
+    "short_description": "",
+    "price": "1400.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 16,
+  "fields": {
+    "name": "Jaguar XKR-S",
+    "image": "cars/foni-papik-pro-rbrb-p-kartinki-avto-na-prozrachnom-fone-19.png",
+    "description": "Эффектное спорткупе с мощным двигателем. Идеален для острых ощущений",
+    "short_description": "",
+    "price": "3500.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 17,
+  "fields": {
+    "name": "AMG G 63 (Гелик)",
+    "image": "cars/png-klev-club-2aqp-p-belii-gelik-png-2.png",
+    "description": "Брутальный внедорожник с исключительными характеристиками. Идеален для демонстрации статуса",
+    "short_description": "",
+    "price": "4300.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 18,
+  "fields": {
+    "name": "Daewoo Matiz",
+    "image": "cars/png-klev-club-2vpo-p-matiz-png-3.png",
+    "description": "Компактный хэтчбек с экономичным расходом топлива. Идеален для города",
+    "short_description": "",
+    "price": "1000.00",
+    "quantity": 1,
+    "category": 2
+  }
+}
+]
