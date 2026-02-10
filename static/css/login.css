@@ -206,6 +206,19 @@
             line-height: 1.5;
         }
 
+        .message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .error-message {
+            background: #ffeaea;
+            color: #ff4757;
+            border: 1px solid #ffcccc;
+        }
+
         /* Адаптивность */
         @media (max-width: 992px) {
             .login-wrapper {

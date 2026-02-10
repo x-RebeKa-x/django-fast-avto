@@ -9,9 +9,15 @@
 {% block header %}
 <header class="cars-header">
     <h2 class="logo">FastAvto</h2>
-    <button>
-        <a class="back-button" href="{% url 'index' %}">← На главную</a>
-    </button>
+        <div class="header-buttons">
+            <a class="back-button" href="{% url 'index' %}">← На главную</a>
+            <a class="back-button" href="{% url 'users:profile' %}">Профиль</a>
+            {% if user.is_authenticated %}
+                <a class="back-button" href="{% url 'users:logout' %}">Выйти</a>
+            {% else %}
+                <a class="back-button" href="{% url 'users:login' %}">Войти</a>
+            {% endif %}
+        </div>
 </header>
 {% endblock %}
 

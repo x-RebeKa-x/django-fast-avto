@@ -1,0 +1,76 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1 class="profile-title">Мой профиль</h1>
+            <div class="header-buttons">
+                <a href="{% url 'index' %}" class="home-button">
+                    ← На главную
+                </a>
+                <a href="{% url 'users:login' %}" class="logout-button">
+                    Выйти
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-info-card">
+            <div class="profile-avatar">
+                ИП
+            </div>
+            
+            <h2 class="profile-nickname"></h2>
+            <p class="profile-fullname"></p>
+            
+            <div class="profile-details">
+                <div class="detail-card">
+                    <h3>Контактная информация</h3>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+                
+<!--                <div class="detail-card">-->
+<!--                    <h3>Статистика</h3>-->
+<!--                    <p>Зарегистрирован: 15.01.2024</p>-->
+<!--                    <p>Бронирований: 5</p>-->
+<!--                    <p>Статус: Постоянный клиент</p>-->
+<!--                </div>-->
+            </div>
+            
+            <div class="profile-actions">
+                <button class="action-button history-button">
+                    📋 История бронирований
+                </button>
+            </div>
+        </div>
+
+        <div class="bookings-section">
+            <h2 class="section-title">Активные бронирования</h2>
+            
+<!--            <div class="bookings-list">-->
+<!--                <div class="booking-item">-->
+<!--                    <div class="booking-car">-->
+<!--                        <h4>Toyota Camry (Комфорт)</h4>-->
+<!--                        <p class="booking-date">20.03.2024 - 25.03.2024</p>-->
+<!--                    </div>-->
+<!--                    <div class="booking-status">Активно</div>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="booking-item">-->
+<!--                    <div class="booking-car">-->
+<!--                        <h4>Kia Rio (Эконом)</h4>-->
+<!--                        <p class="booking-date">28.03.2024 - 30.03.2024</p>-->
+<!--                    </div>-->
+<!--                    <div class="booking-status">Подтверждено</div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

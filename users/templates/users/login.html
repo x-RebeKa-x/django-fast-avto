@@ -3,61 +3,55 @@
 
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}" xmlns="http://www.w3.org/1999/html">
 {% endblock %}
 
 {% block content %}
-    <div class="login-wrapper">
-        <div class="login-box">
-            <div class="login-header">
-                <div class="logo">FastAvto</div>
-                <h1>Вход в систему</h1>
-                <p class="welcome-text">Войдите в свой аккаунт для бронирования автомобилей</p>
+<div class="login-wrapper">
+    <div class="login-box">
+        <div class="login-header">
+            <div class="logo">FastAvto</div>
+            <h1>Вход в систему</h1>
+            <p class="welcome-text">Войдите в свой аккаунт для бронирования автомобилей</p>
+        </div>
+
+        {% if form.errors or messages %}
+            <div id="errorMessage" class="{% if messages %} message {% else %} error-message {% endif %}">
+                {% if messages %}
+                    {% for msg in messages %}
+                        {{ msg }}
+                    {% endfor %}
+                {% else %}
+                    {{ form.non_field_errors }}
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <form id="loginForm" class="login-form" method="post" action="{% url 'users:login' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="input-wrapper">
+                    {{ form.username }}
+                </div>
+
+                <div class="input-wrapper">
+                    {{ form.password }}
+                </div>
             </div>
 
-            <form id="loginForm" class="login-form">
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            placeholder="Имя пользователя"
-                            required
-                            autocomplete="username"
-                        >
-                    </div>
-                </div>
+            <input type="submit" class="login-button" value="Войти">
 
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Пароль"
-                            required
-                            autocomplete="current-password"
-                        >
-                    </div>
-
-                </div>
-
-                <button type="submit" class="login-button">
-                    Войти
-                </button>
-
-                <div class="form-footer">
-                    <p class="register-link">
-                        Нет аккаунта? <a href="{% url 'users:register' %}">Зарегистрироваться</a>
-                    </p>
-                    <a href="{% url 'index' %}" class="back-link">
-                        ← Вернуться на главную
-                    </a>
-                </div>
-            </form>
-        </div>
+            <div class="form-footer">
+                <p class="register-link">
+                    Нет аккаунта? <a href="{% url 'users:register' %}">Зарегистрироваться</a>
+                </p>
+                <a href="{% url 'index' %}" class="back-link">
+                    ← Вернуться на главную
+                </a>
+            </div>
+        </form>
     </div>
+</div>
 {% endblock %}
 
 {% block footer %}
