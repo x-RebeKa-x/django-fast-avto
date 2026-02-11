@@ -1,7 +1,7 @@
 from django.contrib import auth, messages
 from django.contrib.auth import authenticate
 from django.shortcuts import render, HttpResponseRedirect, redirect
-from users.forms import UserLoginForm, UserRegisterForm
+from users.forms import UserLoginForm, UserRegisterForm, UserProfileForm
 from django.urls import reverse
 
 def login(request):
@@ -49,4 +49,17 @@ def logout(request):
     return HttpResponseRedirect(reverse('index'))
 
 def profile(request):
-    return render(request, 'users/profile.html')
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, message='Ваш профиль создан')
+            return HttpResponseRedirect(reverse('users:profile'))
+    else:
+        form = UserProfileForm(instance=request.user)
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'users/profile.html', context)

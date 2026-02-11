@@ -16,7 +16,7 @@
         </div>
 
         {% if form.errors or messages %}
-            <div id="errorMessage" class="{% if messages %} message {% else %} error-message {% endif %}">
+            <div id="errorMessage" class="message error-message">
                 {% if messages %}
                     {% for msg in messages %}
                         {{ msg }}

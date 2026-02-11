@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django import forms
 from users.models import User
 
@@ -47,3 +47,12 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("first_name", "last_name", "username", "password1", "password2")
+
+class UserProfileForm(UserChangeForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={'readonly': True, 'class': 'profile-nickname'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'profile-fullname'}))
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'profile-fullname'}))
+
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'username')
