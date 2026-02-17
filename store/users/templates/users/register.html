@@ -15,88 +15,55 @@
             <p class="welcome-text">Зарегистрируйтесь для бронирования автомобилей</p>
         </div>
 
-        <form id="registerForm" class="register-form">
-            <div id="errorMessage" class="message error-message"></div>
-            <div id="successMessage" class="message success-message"></div>
+        <form id="registerForm" class="register-form" method="POST" action="{% url 'users:register' %}">
+            {% csrf_token %}
+
+            {% if form.errors %}
+                <ul id="errorMessage" class="message error-message">
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
 
             <div class="form-group">
                 <div class="input-wrapper">
-                    <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            placeholder="Имя пользователя"
-                            required
-                            autocomplete="username"
-                    >
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input
-                                type="text"
-                                id="firstName"
-                                name="firstName"
-                                placeholder="Имя"
-                                required
-                                autocomplete="given-name"
-                        >
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input
-                                type="text"
-                                id="lastName"
-                                name="lastName"
-                                placeholder="Фамилия"
-                                required
-                                autocomplete="family-name"
-                        >
-                    </div>
+                    {{ form.username }}
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="input-wrapper">
-                    <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Пароль"
-                            required
-                            autocomplete="new-password"
-                    >
+                    {{ form.first_name }}
                 </div>
-                <div class="password-strength" id="passwordStrength">
-                    <div class="strength-bar">
-                        <div class="strength-fill" id="strengthFill"></div>
-                    </div>
-                    <div class="strength-text" id="strengthText"></div>
+
+                <div class="input-wrapper">
+                    {{ form.last_name }}
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="input-wrapper">
-                    <input
-                            type="password"
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            placeholder="Подтвердите пароль"
-                            required
-                            autocomplete="new-password"
-                    >
+                    {{ form.password1 }}
                 </div>
-                <div class="password-match" id="passwordMatch">
-                    <span class="match-text"></span>
+
+            </div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    {{ form.password2 }}
                 </div>
             </div>
 
             <button type="submit" class="register-button">
                 Зарегистрироваться
             </button>
+
+            <a type="button" class="back-link" href="{% url 'users:login' %}">
+                    Уже есть аккаунт? Войти
+            </a>
 
         </form>
     </div>

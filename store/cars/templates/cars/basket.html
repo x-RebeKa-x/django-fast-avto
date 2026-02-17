@@ -1,0 +1,28 @@
+{% if baskets %}
+<div class="bookings-section">
+    <h2 class="section-title">Бронирования</h2>
+    <div class="bookings-list">
+        {% for basket in baskets %}
+        <div class="bookings-list">
+            <div class="booking-item">
+                <div class="booking-car">
+                    <h4>{{ basket.car.name }}</h4>
+                    <p class="booking-date">{{ basket.car.created_timestamp }}</p>
+                </div>
+                <div class="booking-status">
+                    Активно
+                </div>
+                <a href="{% url 'cars:basket_delete' basket.id %}">🗑</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% else %}
+<div class="bookings-section">
+    <div class="empty-state">
+        <h2>Корзина пуста</h2>
+    </div>
+</div>
+{% endif %}

@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from users.models import User
 
 # КАРТОЧКА КАТЕГОРИИ АВТОМОБИЛЯ
 class CarCategory(models.Model):
@@ -23,3 +25,19 @@ class Car(models.Model):
 
     def __str__(self):
         return f'{self.name} | {self.category.name}'
+
+    def get_absolute_url(self):
+        return reverse('page_booking', args=[str(self.id)])
+
+    class Meta:
+        verbose_name = 'Car'
+        verbose_name_plural = 'Cars'
+
+class Basket(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    created_timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Корзина для {self.user.name} | Продукт: {self.car.name}'

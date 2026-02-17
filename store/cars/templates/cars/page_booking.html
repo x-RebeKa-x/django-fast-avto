@@ -1,0 +1,84 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/page_booking.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="car-detail">
+    <a href="{% url 'cars:index' %}" class="btn-back">
+        ← Обратно в каталог
+    </a>
+
+    <div class="car-detail-container">
+        <div class="car-detail-image">
+            <img src="/media/{{ car.image }}" alt="{{ car.name }}">
+        </div>
+
+        <div class="car-detail-info">
+            <h1>{{ car.name }}</h1>
+            <div class="car-detail-price">
+                <span class="price-label">Цена:</span>
+                <span class="price-value">{{ car.price }} ₽/день</span>
+            </div>
+
+            <div class="car-detail-description">
+                <h3>Описание</h3>
+                <p>{{ car.description }}</p>
+            </div>
+
+            <div class="booking-form">
+                <h2>Бронирование автомобиля</h2>
+
+                <form id="bookingForm" method="post" action="{% url 'cars:basket_add' car.id %}">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="carModel">Автомобиль:</label>
+                        <input type="text" id="carModel" class="form-control" value="{{ car.name }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Адрес получения <span class="required"></span>:</label>
+                        <input type="text" name="address" id="address"
+                               class="form-control"
+                               placeholder="Введите адрес"
+                               required
+                               minlength="1"
+                               maxlength="200">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="date">Дата получения <span class="required"></span>:</label>
+                            <input type="date" name="date" id="date"
+                                   class="form-control"
+                                   required
+                                   min="{{ now|date:'Y-m-d' }}">
+                        </div>
+
+                        <div class="form-group half">
+                            <label for="time">Время получения <span class="required"></span>:</label>
+                            <input type="time" name="time" id="time"
+                                   class="form-control"
+                                   required
+                                   min="09:00"
+                                   max="21:00">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Забронировать
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

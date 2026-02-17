@@ -1,0 +1,61 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+
+    <div class="profile-header">
+        <h1 class="profile-title">Мой профиль</h1>
+        <div class="header-buttons">
+            <a href="{% url 'index' %}" class="home-button">
+                ← На главную
+            </a>
+            <a href="{% url 'users:login' %}" class="logout-button">
+                Выйти
+            </a>
+        </div>
+    </div>
+    <form method="post" action="{% url 'users:profile' %}">
+        {% csrf_token %}
+        <div class="profile-info-card">
+            <div class="profile-avatar">
+                {{ form.first_name.value|slice:":1" }}
+                {{ form.last_name.value|slice:":1" }}
+            </div>
+
+            <h2 class="profile-nickname">
+                {{ form.username }}
+            </h2>
+            <p class="profile-fullname">
+                {{ form.first_name}}
+                {{ form.last_name }}
+            </p>
+
+            <div class="profile-details">
+                <div class="detail-card">
+                    <h3>Контактная информация</h3>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button class="action-button edit-button">
+                    ✎ Редактировать профиль
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="bookings-section">
+        {% include "cars/basket.html" %}
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

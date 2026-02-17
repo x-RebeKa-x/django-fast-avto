@@ -9,10 +9,15 @@
 {% block header %}
 <header class="cars-header">
     <h2 class="logo">FastAvto</h2>
-        <div class="header-buttons">
-            <a class="back-button" href="{% url 'index' %}">← На главную</a>
-            <a class="back-button" href="{% url 'users:login' %}">Профиль</a>
-        </div>
+    <div class="header-buttons">
+        <a class="back-button" href="{% url 'index' %}">← На главную</a>
+        <a class="back-button" href="{% url 'users:profile' %}">Профиль</a>
+        {% if user.is_authenticated %}
+        <a class="back-button" href="{% url 'users:logout' %}">Выйти</a>
+        {% else %}
+        <a class="back-button" href="{% url 'users:login' %}">Войти</a>
+        {% endif %}
+    </div>
 </header>
 {% endblock %}
 
@@ -24,7 +29,7 @@
 
     <div class="widget-body">
         <div class="category-table">
-<!--            Этот for предназначен для отображения таблички с категориями-->
+            <!--Этот for предназначен для отображения таблички с категориями-->
             {% for category in categories %}
             <a href="" class="table-row economy-row">
                 <div class="row-content">
@@ -39,52 +44,22 @@
 
 {% block content %}
 <div class="image-container">
-<!--    Этот for предназначен для отображения всех карточек товара-->
+    <!--Этот for предназначен для отображения всех карточек товара-->
     {% for car in cars %}
     <div class="item">
         <div class="card">
-            <img src="/media/{{ car.image }}" alt="Kia Rio">
+            <img src="/media/{{ car.image }}" alt="{{ car.name }}">
             <div class="info">
                 <h3>{{ car.name }}</h3>
                 <p class="description">{{ car.description }}</p>
                 <p class="price">{{ car.price }} ₽/день</p>
             </div>
-            <button class="book-btn">Забронировать</button>
+            <a href="{% url 'cars:page_booking' car.id %}" class="book-btn">
+                Подробнее
+            </a>
         </div>
     </div>
     {% endfor %}
 </div>
 {% endblock %}
 
-<!--Этот блок для бронирования после нажатия кнопки-->
-{% block contentJs %}
-<div id="bookingModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Бронирование автомобиля</h2>
-        <form id="bookingForm">
-            <div class="form-group">
-                <label for="carModel">Автомобиль:</label>
-                <input type="text" id="carModel" readonly>
-            </div>
-            <div class="form-group">
-                <label for="address">Адрес получения:</label>
-                <input type="text" id="address" placeholder="Введите адрес" required>
-            </div>
-            <div class="form-group">
-                <label for="date">Дата получения:</label>
-                <input type="date" id="date" required>
-            </div>
-            <div class="form-group">
-                <label for="time">Время получения:</label>
-                <input type="time" id="time" required>
-            </div>
-            <button type="submit" class="submit-btn">Подтвердить бронирование</button>
-        </form>
-    </div>
-</div>
-{% endblock %}
-
-{% block js %}
-<script src="{% static 'js/page.js' %}"></script>
-{% endblock %}
