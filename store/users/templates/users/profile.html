@@ -11,8 +11,8 @@
     <div class="profile-header">
         <h1 class="profile-title">Мой профиль</h1>
         <div class="header-buttons">
-            <a href="{% url 'index' %}" class="home-button">
-                ← На главную
+            <a href="{% url 'cars:index' %}" class="home-button">
+                ← В каталог
             </a>
             <a href="{% url 'users:login' %}" class="logout-button">
                 Выйти
@@ -44,7 +44,7 @@
 
             <div class="profile-actions">
                 <button class="action-button edit-button">
-                    ✎ Редактировать профиль
+                    Редактировать профиль
                 </button>
             </div>
         </div>

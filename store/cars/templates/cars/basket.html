@@ -9,9 +9,6 @@
                     <h4>{{ basket.car.name }}</h4>
                     <p class="booking-date">{{ basket.car.created_timestamp }}</p>
                 </div>
-                <div class="booking-status">
-                    Активно
-                </div>
                 <a href="{% url 'cars:basket_delete' basket.id %}">🗑</a>
             </div>
         </div>
@@ -22,7 +19,7 @@
 {% else %}
 <div class="bookings-section">
     <div class="empty-state">
-        <h2>Корзина пуста</h2>
+        <h2>Нет активных бронирований. Перейдите в каталог</h2>
     </div>
 </div>
 {% endif %}

@@ -31,12 +31,17 @@
         <div class="category-table">
             <!--Этот for предназначен для отображения таблички с категориями-->
             {% for category in categories %}
-            <a href="" class="table-row economy-row">
+            <a href="{% url 'cars:category' category.id %}" class="table-row economy-row">
                 <div class="row-content">
                     <span class="row-title">{{ category.name }}</span>
                 </div>
             </a>
             {% endfor %}
+            <a href="{% url 'cars:index' %}" class="table-row economy-row">
+                <div class="row-content">
+                    <span class="row-title">Все машины</span>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -51,7 +56,7 @@
             <img src="/media/{{ car.image }}" alt="{{ car.name }}">
             <div class="info">
                 <h3>{{ car.name }}</h3>
-                <p class="description">{{ car.description }}</p>
+                <p class="description">{{ car.short_description }}</p>
                 <p class="price">{{ car.price }} ₽/день</p>
             </div>
             <a href="{% url 'cars:page_booking' car.id %}" class="book-btn">
@@ -61,5 +66,36 @@
     </div>
     {% endfor %}
 </div>
-{% endblock %}
 
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item {% if not cars.has_previous %} disabled {% endif %}">
+            <a class="page-link"
+               href="
+               {% if cars.has_previous %}
+                {% url 'cars:page' cars.previous_page_number %}
+               {% else %}
+                 #
+               {% endif %}"
+               tabindex="-1" aria-disabled="true"><-</a>
+        </li>
+
+        {% for page in cars.paginator.page_range %}
+        <li class="page-item {% if page == cars.number %} active {% endif %}">
+            <a class="page-link" href="{% url 'cars:page' page %}">{{ page }}</a>
+        </li>
+        {% endfor %}
+
+        <li class="page-item {% if not cars.has_next %} disabled {% endif %}">
+            <a class="page-link"
+               href="
+               {% if cars.has_next %}
+                {% url 'cars:page' cars.next_page_number %}
+               {% else %}
+                 #
+               {% endif %}"
+            >-></a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}

@@ -11,6 +11,18 @@
         ← Обратно в каталог
     </a>
 
+    {% if messages %}
+
+        {% for message in messages %}
+
+            {{ message }}
+
+
+        {% endfor %}
+
+    {% endif %}
+
+    <!--Реализация показа карточки автомобиля из бд-->
     <div class="car-detail-container">
         <div class="car-detail-image">
             <img src="/media/{{ car.image }}" alt="{{ car.name }}">
@@ -28,10 +40,11 @@
                 <p>{{ car.description }}</p>
             </div>
 
+            <!--Реализация ввода данных для бронирования автомобиля-->
             <div class="booking-form">
                 <h2>Бронирование автомобиля</h2>
-
-                <form id="bookingForm" method="post" action="{% url 'cars:basket_add' car.id %}">
+                <!--{% url 'cars:basket_add' car.id %}-->
+                <form id="bookingForm" method="post" action="{% url 'cars:payment_page' car.id %}">
                     {% csrf_token %}
 
                     <div class="form-group">
@@ -63,8 +76,27 @@
                             <input type="time" name="time" id="time"
                                    class="form-control"
                                    required
-                                   min="09:00"
-                                   max="21:00">
+                                   min="06:00"
+                                   max="24:00">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="date_end">Дата окончания<span class="required"></span>:</label>
+                            <input type="date" name="date_end" id="date_end"
+                                   class="form-control"
+                                   required
+                                   min="{{ now|date:'Y-m-d' }}">
+                        </div>
+
+                        <div class="form-group half">
+                            <label for="time_end">Время окончания<span class="required"></span>:</label>
+                            <input type="time" name="time_end" id="time_end"
+                                   class="form-control"
+                                   required
+                                   min="06:00"
+                                   max="24:00">
                         </div>
                     </div>
 

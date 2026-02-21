@@ -3,9 +3,8 @@ from django.contrib.auth import authenticate
 from django.shortcuts import render, HttpResponseRedirect
 from users.forms import UserLoginForm, UserRegisterForm, UserProfileForm
 from django.urls import reverse
-
 from cars.models import Basket
-
+from django.contrib.auth.decorators import login_required
 
 def login(request):
     if request.method == 'POST':
@@ -46,11 +45,11 @@ def register(request):
 
     return render(request, 'users/register.html', context)
 
-
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))
 
+@login_required()
 def profile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=request.user)
@@ -61,9 +60,15 @@ def profile(request):
     else:
         form = UserProfileForm(instance=request.user)
 
+    baskets = Basket.objects.filter(user=request.user)
+    # Нужно для подсчета количество товара в корзине(не карточек товара)
+    # total_baskets = sum(basket.quantity for basket in baskets)
+    # Нужно для подсчета полной стоимости товаров в корзине
+    # total_sum = sum(basket.sum() for basket in baskets)
+
     context = {
         'form': form,
-        'baskets': Basket.objects.filter(user=request.user),
+        'baskets': baskets,
     }
 
     return render(request, 'users/profile.html', context)
