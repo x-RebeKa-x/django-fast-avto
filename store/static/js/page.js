@@ -76,11 +76,17 @@ window.onclick = function(event) {
 document.getElementById('date').addEventListener('change', function() {
     const selectedDate = new Date(this.value);
     const today = new Date();
+    const errorElement = document.querySelector('.error-message');
+
     today.setHours(0, 0, 0, 0);
 
     if (selectedDate < today) {
-        alert('Нельзя выбрать прошедшую дату');
+        errorElement.style.display = 'block';
         this.value = '';
+        this.classList.add('error');
+    } else {
+        errorElement.style.display = 'none';
+        this.classList.remove('error');
     }
 });
 
@@ -91,3 +97,4 @@ document.getElementById('time').addEventListener('change', function() {
         this.value = '';
     }
 });
+

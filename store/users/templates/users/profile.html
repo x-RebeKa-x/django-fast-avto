@@ -19,6 +19,15 @@
             </a>
         </div>
     </div>
+
+    {% if messages %}
+    <ul class="message">
+        {% for msg in messages %}
+            <li>{{ msg }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     <form method="post" action="{% url 'users:profile' %}">
         {% csrf_token %}
         <div class="profile-info-card">

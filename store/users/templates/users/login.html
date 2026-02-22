@@ -3,7 +3,7 @@
 
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -15,16 +15,18 @@
             <p class="welcome-text">Войдите в свой аккаунт для бронирования автомобилей</p>
         </div>
 
-        {% if form.errors or messages %}
-            <div id="errorMessage" class="message error-message">
+        {% if from.errors or messages %}
+            <ul class="{% if messages %} message {% else %} error-message {% endif %}">
                 {% if messages %}
                     {% for msg in messages %}
-                        {{ msg }}
+                        <li>{{ msg }}</li>
                     {% endfor %}
                 {% else %}
-                    {{ form.non_field_errors }}
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
                 {% endif %}
-            </div>
+            </ul>
         {% endif %}
 
         <form id="loginForm" class="login-form" method="post" action="{% url 'users:login' %}">

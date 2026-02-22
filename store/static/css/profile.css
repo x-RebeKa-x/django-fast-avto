@@ -17,7 +17,6 @@
             padding: 40px 20px;
         }
         
-        /* Header профиля */
         .profile-header {
             display: flex;
             justify-content: space-between;
@@ -26,6 +25,13 @@
             flex-wrap: wrap;
             gap: 20px;
         }
+
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            list-style: none;
+        }
         
         .profile-title {
             font-size: 2.5rem;
@@ -33,7 +39,6 @@
             font-weight: 700;
         }
         
-        /* Кнопки в header */
         .header-buttons {
             display: flex;
             gap: 15px;
@@ -75,7 +80,6 @@
             color: #333;
         }
         
-        /* Основная информация профиля */
         .profile-info-card {
             background: white;
             border-radius: 20px;
@@ -100,7 +104,6 @@
             box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
         }
         
-        /* Никнейм */
         .profile-nickname {
             text-align: center;
             font-size: 2.8rem;
@@ -110,17 +113,15 @@
             letter-spacing: 1px;
         }
         
-        /* Имя и фамилия (бледным цветом) */
         .profile-fullname {
             text-align: center;
             font-size: 1.5rem;
-            color: #95a5a6; /* Бледный серый цвет */
+            color: #95a5a6;
             margin-bottom: 40px;
             font-weight: 400;
             opacity: 0.8;
         }
         
-        /* Дополнительная информация */
         .profile-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,7 +148,6 @@
             line-height: 1.6;
         }
         
-        /* История бронирований */
         .bookings-section {
             background: white;
             border-radius: 20px;
@@ -210,7 +210,6 @@
             font-weight: 600;
         }
         
-        /* Пустое состояние */
         .empty-state {
             text-align: center;
             padding: 40px;
@@ -223,7 +222,6 @@
             opacity: 0.5;
         }
         
-        /* Действия профиля */
         .profile-actions {
             display: flex;
             justify-content: center;
@@ -266,7 +264,6 @@
             border-color: #3498db;
         }
         
-        /* Адаптивность */
         @media (max-width: 992px) {
             .profile-header {
                 flex-direction: column;

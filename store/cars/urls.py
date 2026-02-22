@@ -1,5 +1,5 @@
 from django.urls import path
-from cars.views import cars, basket_add, basket_delete, page_booking, payment_page
+from cars.views import cars, basket_add, basket_delete, page_booking, payment_page, cheque
 
 app_name = 'cars'
 
@@ -11,5 +11,6 @@ urlpatterns = [
     path('basket-delete/<int:basket_id>', basket_delete, name='basket_delete'),
     path('booking/<int:car_id>', page_booking, name='page_booking'),
     path('payment/<int:car_id>', payment_page, name='payment_page'),
+    path('cheque/<int:car_id>', cheque, name='cheque'),
 ]
 

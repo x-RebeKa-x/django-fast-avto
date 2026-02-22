@@ -1,0 +1,63 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/cheque.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="confirmation-container">
+    <a href="{% url 'users:profile' %}" class="btn-back">
+        ← Вернуться в профиль
+    </a>
+
+    <div class="header">
+        <h1>Чек об оплате</h1>
+    </div>
+
+    <div class="content">
+        <div class="booking-details">
+            <h2 class="section-title">Детали бронирования</h2>
+
+            <div class="detail-item">
+                <span class="label">Автомобиль:</span>
+                <span class="value">{{ car.name }}</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Адрес получения:</span>
+                <span class="value">{{ booking.address }}</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Дата и время получения:</span>
+                <span class="value">{{ booking.date }} в {{ booking.time }}</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Дата и время возврата:</span>
+                <span class="value">{{ booking.date_end }} в {{ booking.time_end }}</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Длительность аренды:</span>
+                <span class="value">{{ booking.days }} {{ booking.days_word }}</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Цена за день:</span>
+                <span class="value">{{ car.price }} ₽</span>
+            </div>
+
+            <div class="detail-item total">
+                <span class="label">Общая стоимость:</span>
+                <span class="value">{{ booking.total_price }} ₽</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

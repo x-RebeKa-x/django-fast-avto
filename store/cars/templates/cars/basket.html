@@ -8,6 +8,7 @@
                 <div class="booking-car">
                     <h4>{{ basket.car.name }}</h4>
                     <p class="booking-date">{{ basket.car.created_timestamp }}</p>
+                    <a href="{% url 'cars:cheque' basket.car.id %}" class="booking-status">Показать чек</a>
                 </div>
                 <a href="{% url 'cars:basket_delete' basket.id %}">🗑</a>
             </div>

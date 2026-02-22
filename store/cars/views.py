@@ -1,5 +1,6 @@
 from lib2to3.fixes.fix_input import context
 
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from cars.models import CarCategory, Car, Basket
@@ -39,11 +40,11 @@ def basket_add(request, car_id):
 
     if not baskets.exists():
         Basket.objects.create(user=request.user, car=car)
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        return redirect('users:profile')
     else:
         basket = baskets.first()
         basket.save()
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        return redirect('users:profile')
 
 
 def basket_delete(request, basket_id):
@@ -51,7 +52,7 @@ def basket_delete(request, basket_id):
     basket_remove.delete()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-@login_required()
+
 def page_booking(request, car_id):
     car = get_object_or_404(Car, id=car_id)
 
@@ -78,10 +79,10 @@ def page_booking(request, car_id):
 
         total_price = car.price * days
 
-        booking_data = {
+        request.session['booking_data'] = {
             'car_id': car.id,
             'car_name': car.name,
-            'car_price': car.price,
+            'car_price': str(car.price),
             'address': address,
             'date': date,
             'time': time,
@@ -89,13 +90,12 @@ def page_booking(request, car_id):
             'time_end': time_end,
             'days': days,
             'days_word': days_word,
-            'total_price': total_price,
+            'total_price': str(total_price),
             'payment_method': payment_method,
         }
 
-        request.session['booking_data'] = booking_data
-
-        return redirect('users:profile')
+        messages.success(request, 'Машина забронирована')
+        return redirect('users:profile', car_id=car_id.id)
 
     context = {
         'car': car,
@@ -107,6 +107,11 @@ def page_booking(request, car_id):
 def payment_page(request, car_id):
     car = get_object_or_404(Car, id=car_id)
 
+    session_data = request.session.get('booking_data', {})
+
+    if not isinstance(session_data, str):
+        session_data = {}
+
     booking_data = {
         'address': request.GET.get('address', ''),
         'date': request.GET.get('date', ''),
@@ -115,9 +120,47 @@ def payment_page(request, car_id):
         'time_end': request.GET.get('time_end', ''),
     }
 
-    session_data = request.session.get('booking_data', {})
-    if session_data:
+    if session_data and isinstance(session_data, dict):
         booking_data.update(session_data)
+
+    if not session_data and request.method == 'POST':
+        address = request.POST.get('address')
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+        date_end = request.POST.get('date_end')
+        time_end = request.POST.get('time_end')
+
+        if all([address, date, time, date_end, time_end]):
+            date_start_object = datetime.strptime(date, '%Y-%m-%d').date()
+            date_end_object = datetime.strptime(date_end, '%Y-%m-%d').date()
+            days = (date_end_object - date_start_object).days
+            if days < 1:
+                days = 1
+
+            if days % 10 == 1 and days % 100 != 11:
+                days_word = 'день'
+            elif 2 <= days % 10 <= 4 and not (12 <= days % 100 <= 14):
+                days_word = 'дня'
+            else:
+                days_word = 'дней'
+
+            total_price = car.price * days
+
+            booking_data = {
+                'car_id': car.id,
+                'car_name': car.name,
+                'car_price': str(car.price),
+                'address': address,
+                'date': date,
+                'time': time,
+                'date_end': date_end,
+                'time_end': time_end,
+                'days': days,
+                'days_word': days_word,
+                'total_price': str(total_price),
+            }
+
+            request.session['booking_data'] = booking_data
 
     context = {
         'car': car,
@@ -126,3 +169,20 @@ def payment_page(request, car_id):
 
     return render(request, "cars/payment_page.html", context)
 
+
+def cheque(request, car_id):
+    car = get_object_or_404(Car, id=car_id)
+
+    session_data = request.session.get('booking_data', {})
+
+    if session_data and isinstance(session_data, dict):
+        booking_data = session_data
+    else:
+        booking_data = {}
+
+    context = {
+        'car': car,
+        'booking': booking_data
+    }
+
+    return render(request, "cars/cheque.html", context)
