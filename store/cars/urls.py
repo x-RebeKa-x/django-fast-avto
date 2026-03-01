@@ -5,7 +5,7 @@ app_name = 'cars'
 
 urlpatterns = [
     path('', cars, name='index'),
-    path('/<int:category_id>', cars, name='category'),
+    path('<int:category_id>', cars, name='category'),
     path('page/<int:page>', cars, name='page'),
     path('basket-add/<int:car_id>', basket_add, name='basket_add'),
     path('basket-delete/<int:basket_id>', basket_delete, name='basket_delete'),

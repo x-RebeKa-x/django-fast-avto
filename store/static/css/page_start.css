@@ -89,7 +89,8 @@ main {
     margin-bottom: 40px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    margin-right: 20px; /* Отступ от правой части */
+    margin-right: 20px;
+    /* Отступ от правой части */
 }
 
 .info-box p {
@@ -147,7 +148,8 @@ main {
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
     position: relative;
     overflow: hidden;
-    margin-right: 20px; /* Отступ от правой части */
+    margin-right: 20px;
+    /* Отступ от правой части */
 }
 
 .cta-button::before {
@@ -197,6 +199,7 @@ footer p {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -208,6 +211,7 @@ footer p {
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -218,6 +222,7 @@ footer p {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -228,36 +233,36 @@ footer p {
     .content {
         padding: 20px;
     }
-    
+
     .logo {
         font-size: 3rem;
     }
-    
+
     .tagline {
         font-size: 1.2rem;
     }
-    
+
     .info-box {
         padding: 25px;
         margin-right: 0;
         max-width: 100%;
     }
-    
+
     .info-box p {
         font-size: 1.1rem;
     }
-    
+
     .features {
         grid-template-columns: 1fr;
     }
-    
+
     .cta-button {
         width: 100%;
         justify-content: center;
         margin-right: 0;
         padding: 18px 30px;
     }
-    
+
     main {
         align-items: center;
     }

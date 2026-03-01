@@ -7,6 +7,7 @@
     {% block css %} {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastAvto</title>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 </head>
 <body>
 
@@ -22,10 +23,41 @@
 
     {% block js %} {% endblock %}
 
-    {% block footer %}
-    <footer>
-        <p>Телефон: +7 (999) 123-45-67</p>
-    </footer>
-    {% endblock %}
+{% block footer %}
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>КОНТАКТЫ</h3>
+            <ul class="footer-list">
+                <li> Рязань, ул. Солнечная, 512</li>
+                <li> +7 (999) 123-45-67</li>
+                <li> info@fastavto.ru</li>
+            </ul>
+            <p class="footer-copyright">© 2026 FastAvto. Все права защищены.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>НАВИГАЦИЯ</h3>
+            <ul class="footer-list">
+                <li><a>Каталог</a></li>
+                <li><a>О нас</a></li>
+                <li><a>Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>МЫ В СОЦСЕТЯХ</h3>
+            <ul class="footer-list">
+                <li><a>Telegram</a></li>
+                <li><a>Max</a></li>
+            </ul>
+            <ul class="footer-links">
+                <li><a>Политика конфиденциальности</a></li>
+                <li><a>Условия использования</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+{% endblock %}
 </body>
 </html>

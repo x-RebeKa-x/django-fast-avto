@@ -5,7 +5,6 @@
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
-
 {% block content %}
 <div class="login-wrapper">
     <div class="login-box">
@@ -15,31 +14,32 @@
             <p class="welcome-text">Войдите в свой аккаунт для бронирования автомобилей</p>
         </div>
 
-        {% if from.errors or messages %}
-            <ul class="{% if messages %} message {% else %} error-message {% endif %}">
-                {% if messages %}
-                    {% for msg in messages %}
-                        <li>{{ msg }}</li>
-                    {% endfor %}
-                {% else %}
-                    {% for error in form.non_field_errors %}
-                        <li>{{ error }}</li>
-                    {% endfor %}
-                {% endif %}
-            </ul>
+        {% if form.errors or messages %}
+        <div class="messages-container">
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="message">{{ msg }}</div>
+                {% endfor %}
+            {% else %}
+                {% for error in form.non_field_errors %}
+                    <div class="error-message">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
         {% endif %}
 
         <form id="loginForm" class="login-form" method="post" action="{% url 'users:login' %}">
             {% csrf_token %}
-            <div class="form-group">
-                <div class="input-wrapper">
-                    {{ form.username }}
-                </div>
-
-                <div class="input-wrapper">
-                    {{ form.password }}
-                </div>
+            <div class="input-wrapper">
+                <label>Никнейм</label>
+                {{ form.username }}
             </div>
+
+            <div class="input-wrapper">
+                <label>Пароль</label>
+                {{ form.password }}
+            </div>
+
 
             <input type="submit" class="login-button" value="Войти">
 

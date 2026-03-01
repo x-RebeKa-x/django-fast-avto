@@ -11,14 +11,6 @@
         ← Обратно в каталог
     </a>
 
-    {% if messages %}
-    <ul class="{% if messages %} message {% else %} error-message {% endif %}">
-        {% for msg in messages %}
-            <li>{{ msg }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-
     <!--Реализация показа карточки автомобиля из бд-->
     <div class="car-detail-container">
         <div class="car-detail-image">
@@ -29,7 +21,7 @@
             <h1>{{ car.name }}</h1>
             <div class="car-detail-price">
                 <span class="price-label">Цена:</span>
-                <span class="price-value">{{ car.price }} ₽/день</span>
+                <span class="price-value"> {{ car.price }} ₽/день</span>
             </div>
 
             <div class="car-detail-description">
@@ -38,9 +30,8 @@
             </div>
 
             <!--Реализация ввода данных для бронирования автомобиля-->
-            <div class="booking-form">
+            <div>
                 <h2>Бронирование автомобиля</h2>
-                <!--{% url 'cars:basket_add' car.id %}-->
                 <form id="bookingForm" method="post" action="{% url 'cars:payment_page' car.id %}">
                     {% csrf_token %}
 
@@ -65,7 +56,7 @@
                             <input type="date" name="date" id="date"
                                    class="form-control"
                                    required
-                                   min="2026-02-21">
+                                   min="{{ now|date:'Y-m-d' }}">
                         </div>
 
                         <div class="form-group half">
@@ -84,7 +75,7 @@
                             <input type="date" name="date_end" id="date_end"
                                    class="form-control"
                                    required
-                                   min="2026-02-22">
+                                   min="{{ now|date:'Y-m-d' }}">
                         </div>
 
                         <div class="form-group half">
@@ -98,16 +89,15 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="submit-btn" id="submitBtn">
-                            Забронировать
-                        </button>
+                        {% if user.is_authenticated %}
+                        <button type="submit" class="submit-btn" id="submitBtn">Забронировать</button>
+                        {% else %}
+                        <a class="submit-btn" href="{% url 'users:login' %}">Войти</a>
+                        {% endif %}
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

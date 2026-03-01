@@ -99,6 +99,7 @@ def page_booking(request, car_id):
 
     context = {
         'car': car,
+        'now': datetime.now(),
     }
 
     return render(request, "cars/page_booking.html", context)

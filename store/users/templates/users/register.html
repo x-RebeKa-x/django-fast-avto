@@ -15,46 +15,42 @@
             <p class="welcome-text">Зарегистрируйтесь для бронирования автомобилей</p>
         </div>
 
+        {% if form.errors %}
+        <div class="messages-container">
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    <div class="error-message">{{ error }}</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
         <form id="registerForm" class="register-form" method="POST" action="{% url 'users:register' %}">
             {% csrf_token %}
 
-            {% if form.errors %}
-                <ul class="error-message">
-                    {% for field, errors in form.errors.items %}
-                        {% for error in errors %}
-                            <li>{{ error }}</li>
-                        {% endfor %}
-                    {% endfor %}
-                </ul>
-            {% endif %}
-
-            <div class="form-group">
-                <div class="input-wrapper">
-                    {{ form.username }}
-                </div>
+            <div class="input-wrapper">
+                <label>Никнейм</label>
+                {{ form.username }}
             </div>
 
-            <div class="form-group">
-                <div class="input-wrapper">
-                    {{ form.first_name }}
-                </div>
-
-                <div class="input-wrapper">
-                    {{ form.last_name }}
-                </div>
+            <div class="input-wrapper">
+                <label>Имя</label>
+                {{ form.first_name }}
             </div>
 
-            <div class="form-group">
-                <div class="input-wrapper">
-                    {{ form.password1 }}
-                </div>
-
+            <div class="input-wrapper">
+                <label>Фамилия</label>
+                {{ form.last_name }}
             </div>
 
-            <div class="form-group">
-                <div class="input-wrapper">
-                    {{ form.password2 }}
-                </div>
+            <div class="input-wrapper">
+                <label>Пароль</label>
+                {{ form.password1 }}
+            </div>
+
+            <div class="input-wrapper">
+                <label>Повторить пароль</label>
+                {{ form.password2 }}
             </div>
 
             <button type="submit" class="register-button">
@@ -62,7 +58,7 @@
             </button>
 
             <a type="button" class="back-link" href="{% url 'users:login' %}">
-                    Уже есть аккаунт? Войти
+                Уже есть аккаунт? Войти
             </a>
 
         </form>

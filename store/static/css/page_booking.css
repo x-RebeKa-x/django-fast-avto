@@ -2,7 +2,6 @@
         max-width: 1400px;
         margin: 0 auto;
         padding: 40px 20px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         min-height: 100vh;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -24,10 +23,8 @@
     }
 
     .btn-back:hover {
-        transform: translateX(-5px);
         border-color: #ff6b35;
         color: #ff6b35;
-        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
     }
 
     .car-detail-container {
@@ -37,14 +34,12 @@
         background: white;
         border-radius: 30px;
         padding: 40px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         border: 1px solid #eaeaea;
     }
 
     .car-detail-image {
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         height: fit-content;
         position: relative;
     }
@@ -56,7 +51,6 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(45deg, rgba(255,107,53,0.2), rgba(52,152,219,0.2));
         pointer-events: none;
     }
 
@@ -66,7 +60,6 @@
         max-height: 500px;
         object-fit: cover;
         display: block;
-        transition: transform 0.5s ease;
     }
 
     .car-detail-info {
@@ -86,36 +79,33 @@
     }
 
     .car-detail-info h1::after {
-        content: '';
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100px;
         height: 4px;
-        background: linear-gradient(45deg, #ff6b35, #3498db);
         border-radius: 2px;
     }
 
     .car-detail-price {
-        background: linear-gradient(135deg, #667eea, #764ba2);
         padding: 25px;
         border-radius: 20px;
-        color: white;
+        background: #ff6b35;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     }
 
     .price-label {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
         opacity: 0.9;
+        color: white;
         font-weight: 500;
     }
 
     .price-value {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-weight: 700;
+        color: white;
         letter-spacing: 1px;
     }
 
@@ -138,46 +128,22 @@
         text-align: justify;
     }
 
-    .booking-form {
-        background: #f8f9fa;
-        border-radius: 20px;
-        padding: 30px;
-        border: 2px solid #eaeaea;
-        margin-top: 20px;
-    }
-
-    .booking-form h2 {
-        font-size: 1.8rem;
-        color: #2c3e50;
-        margin-bottom: 30px;
-        font-weight: 600;
-        position: relative;
-        padding-bottom: 15px;
-    }
-
-    .booking-form h2::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(45deg, #ff6b35, #3498db);
-        border-radius: 2px;
-    }
-
     .form-group {
         margin-bottom: 25px;
+        width: 100%;
+        clear: both;
     }
 
     .form-row {
         display: flex;
         gap: 20px;
         margin-bottom: 25px;
+        width: 100%;
     }
 
     .form-group.half {
         flex: 1;
+        min-width: 0;
         margin-bottom: 0;
     }
 
@@ -202,6 +168,9 @@
         font-size: 1rem;
         transition: all 0.3s ease;
         background: white;
+        box-sizing: border-box;
+        height: auto;
+        line-height: normal;
     }
 
     .form-control:focus {
@@ -244,7 +213,9 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        margin-top: 20px;
+        margin-top: 30px;
+        box-sizing: border-box;
+        text-decoration: none;
     }
 
     .submit-btn:hover {
@@ -323,91 +294,3 @@
             font-size: 1.1rem;
         }
     }
-
-.payment-section {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 25px 0;
-    border: 2px solid #eaeaea;
-}
-
-.payment-title {
-    color: #2c3e50;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #27ae60;
-}
-
-.payment-options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.payment-option {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    background: white;
-    border: 2px solid #eaeaea;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.payment-option:hover {
-    border-color: #ff6b35;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.1);
-}
-
-.payment-option input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-}
-
-.payment-radio {
-    width: 22px;
-    height: 22px;
-    border: 2px solid #cbd5e0;
-    border-radius: 50%;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.payment-option input[type="radio"]:checked + .payment-radio {
-    border-color: #27ae60;
-}
-
-.payment-option input[type="radio"]:checked + .payment-radio::after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 12px;
-    height: 12px;
-    background: #27ae60;
-    border-radius: 50%;
-}
-
-.payment-content {
-    flex: 1;
-}
-
-.payment-name {
-    display: block;
-    color: #2c3e50;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-}
-
-.payment-desc {
-    display: block;
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
