@@ -27,10 +27,16 @@ class Car(models.Model):
 
 # РЕАЛИЗАЦИЯ КОРЗИНЫ В ПРОФИЛЕ
 class Basket(models.Model):
+    STATUS_CHOICES = [
+        ('active', 'Активно'),
+        ('pending', 'В процессе'),
+    ]
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
     created_timestamp = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20,choices=STATUS_CHOICES,default='pending',verbose_name='Статус')
 
     def __str__(self):
         return f'Корзина для {self.user.name} | Продукт: {self.car.name}'

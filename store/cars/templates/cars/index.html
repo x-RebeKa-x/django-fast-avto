@@ -6,41 +6,39 @@
 {% endblock %}
 
 {% block content %}
-<div class="content">
-    <header>
-        <h1 class="logo">FastAvto</h1>
-        <p class="tagline">Быстро. Надежно. Удобно.</p>
-    </header>
-
-    <main>
-        <div class="info-box">
-            <p>Этот сервис предназначен для быстрого бронирования автомобиля. Здесь есть большой ассортимент машин
-                разных марок, от эконом-класса до премиум-сегмента. Мы гарантируем лучшие цены и качественный
-                сервис.</p>
-
-            <div class="features">
-                <div class="feature">
-                    <span>🚗</span>
-                    <p>100+ моделей</p>
+<div class="catalog-page">
+    <div class="header">
+        <div class="header-buttons">
+            <a href="{% url 'users:profile' %}" class="btn btn-profile">Профиль</a>
+            {% if user.is_authenticated %}
+            <a class="btn btn-logout" href="{% url 'users:logout' %}">Выйти</a>
+            {% else %}
+            <a class="btn btn-logout" href="{% url 'users:login' %}">Войти</a>
+            {% endif %}
+        </div>
+    </div>
+    <h1 class="catalog-title">Рекомендовано</h1>
+    <div class="image-container">
+        {% for car in cars %}
+        <div class="item">
+            <div class="card">
+                <img src="/media/{{ car.image }}" alt="{{ car.name }}">
+                <div class="info">
+                    <h3>{{ car.name }}</h3>
+                    <p class="description">{{ car.short_description }}</p>
+                    <p class="price">{{ car.price }} ₽/день</p>
                 </div>
-                <div class="feature">
-                    <span>💰</span>
-                    <p>Лучшие цены</p>
-                </div>
-                <div class="feature">
-                    <span>⏱️</span>
-                    <p>Быстрое оформление</p>
-                </div>
-                <div class="feature">
-                    <span>⭐</span>
-                    <p>Высокий рейтинг</p>
-                </div>
+                <a href="{% url 'cars:page_booking' car.id %}" class="book-btn">
+                    Подробнее
+                </a>
             </div>
         </div>
-
-        <a class="cta-button" href="{% url 'cars:index' %}">
-            Посмотреть машины
+        {% endfor %}
+    </div>
+    <div class="catalog-footer">
+        <a href="{% url 'cars:index' %}" class="btn-catalog">
+            Перейти к каталогу
         </a>
-    </main>
+    </div>
 </div>
 {% endblock %}

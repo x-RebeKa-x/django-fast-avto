@@ -4,14 +4,25 @@
     <div class="bookings-list">
         {% for basket in baskets %}
         <div class="bookings-list">
+            {% if basket.status == 'active' %}
             <div class="booking-item">
                 <div class="booking-car">
                     <h4>{{ basket.car.name }}</h4>
-                    <p class="booking-date">{{ basket.car.created_timestamp }}</p>
                     <a href="{% url 'cars:cheque' basket.car.id %}" class="booking-status">Показать чек</a>
                 </div>
+                <div class="active-status">Оплачено</div>
                 <a href="{% url 'cars:basket_delete' basket.id %}">🗑</a>
             </div>
+            {% else %}
+             <div class="process-booking-item">
+                <div class="booking-car">
+                    <h4>{{ basket.car.name }}</h4>
+                    <a href="{% url 'cars:cheque' basket.car.id %}" class="booking-status">Показать чек</a>
+                </div>
+                <div class="process-status">Оплатите в салоне</div>
+                <a href="{% url 'cars:basket_delete' basket.id %}">🗑</a>
+            </div>
+            {% endif %}
         </div>
     </div>
     {% endfor %}

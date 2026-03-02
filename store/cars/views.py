@@ -9,8 +9,25 @@ from django.core.paginator import Paginator
 from datetime import datetime
 
 
-def index(request):
-    return render(request, "cars/index.html")
+def index(request, category_id=None, page=1):
+    context = {
+        'title': 'Car | Categories',
+        'categories': CarCategory.objects.all(),
+    }
+
+    if category_id:
+        filtered_cars = Car.objects.filter(category_id=category_id)
+    else:
+        filtered_cars = Car.objects.all()
+
+    filtered_cars = filtered_cars.order_by('?')
+
+    paginator = Paginator(filtered_cars, 5)
+    cars_paginator = paginator.page(page)
+
+    context['cars'] = cars_paginator
+
+    return render(request, "cars/index.html", context)
 
 
 def cars(request, category_id=None, page=1):
@@ -36,15 +53,32 @@ def cars(request, category_id=None, page=1):
 @login_required()
 def basket_add(request, car_id):
     car = Car.objects.get(id=car_id)
-    baskets = Basket.objects.filter(user=request.user, car=car)
 
-    if not baskets.exists():
-        Basket.objects.create(user=request.user, car=car)
-        return redirect('users:profile')
+    card_number = request.POST.get('card_number')
+
+    if card_number:
+        status = 'active'
     else:
-        basket = baskets.first()
+        status = 'pending'
+
+    if Basket.objects.filter(user=request.user, status='active').exists():
+        messages.error(request, 'У вас уже есть забронированная машина')
+        return redirect('users:profile')
+    elif Basket.objects.filter(user=request.user, status='pending').exists():
+        messages.error(request, 'У вас уже есть забронированная машина')
+        return redirect('users:profile')
+
+    basket, created = Basket.objects.get_or_create(
+        user=request.user,
+        car=car,
+        defaults={'status': status}
+    )
+
+    if not created:
+        basket.status = status
         basket.save()
         return redirect('users:profile')
+    return redirect('users:profile')
 
 
 def basket_delete(request, basket_id):

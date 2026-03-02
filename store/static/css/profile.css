@@ -75,6 +75,23 @@ body {
     border: 2px solid #ddd;
 }
 
+.messages-container {
+    margin: 0 0 25px 0;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
 .logout-button:hover {
     background: #e9ecef;
     border-color: #ff6b35;
@@ -93,7 +110,7 @@ body {
 .profile-avatar {
     width: 150px;
     height: 150px;
-    background: linear-gradient(45deg, #3498db, #2980b9);
+    background: linear-gradient(45deg, #2c3e50, #34495e);
     border-radius: 50%;
     margin: 0 auto 30px;
     display: flex;
@@ -117,7 +134,6 @@ body {
 .profile-fullname {
     text-align: center;
     font-size: 1.5rem;
-    color: #95a5a6;
     margin-bottom: 40px;
     font-weight: 400;
     opacity: 0.8;
@@ -134,7 +150,7 @@ body {
     background: #f8f9fa;
     padding: 25px;
     border-radius: 15px;
-    border-left: 5px solid #3498db;
+    border-left: 5px solid #ff6b35;
 }
 
 .detail-card h3 {
@@ -187,6 +203,21 @@ body {
     background: #e9ecef;
 }
 
+.process-booking-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 5px solid #ff6b35;
+    transition: all 0.3s ease;
+}
+
+.process-booking-item:hover {
+    transform: translateX(-5px);
+    background: #e9ecef;
+}
+
 .booking-car {
     flex: 1;
 }
@@ -204,6 +235,24 @@ body {
 
 .booking-status {
     background: #2ecc71;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.active-status {
+    background: #2ecc71;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.process-status {
+    background: #ff6b35;
     color: white;
     padding: 6px 15px;
     border-radius: 20px;
@@ -245,7 +294,7 @@ body {
 }
 
 .edit-button {
-    background: linear-gradient(45deg, #3498db, #2980b9);
+    background: #ff6b35;
     color: white;
 }
 

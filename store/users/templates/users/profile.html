@@ -20,13 +20,6 @@
         </div>
     </div>
 
-    {% if messages %}
-    <ul class="message">
-        {% for msg in messages %}
-            <li>{{ msg }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
 
     <form method="post" action="{% url 'users:profile' %}">
         {% csrf_token %}
@@ -61,6 +54,13 @@
 
 
     <div class="bookings-section">
+        {% if form.errors or messages %}
+        <div class="messages-container">
+            {% for msg in messages %}
+            <div class="error-message">{{ msg }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
         {% include "cars/basket.html" %}
     </div>
 </div>
