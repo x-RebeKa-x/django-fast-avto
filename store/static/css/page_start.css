@@ -1,4 +1,5 @@
 .catalog-page {
+    font-family: 'Arial', sans-serif;
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
@@ -65,7 +66,6 @@
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
@@ -157,31 +157,167 @@
     transition: all 0.3s ease;
 }
 
-.catalog-footer {
-    text-align: center;
-    margin-top: 40px;
-}
+.about-section {
+        background: #f5f5f5;
+        padding: 60px 0;
+        margin-top: 40px;
+    }
 
-.btn-catalog {
-    display: inline-block;
-    padding: 18px 50px;
-    background: #ff6b35;
-    color: white;
-    border: none;
-    border-radius: 40px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
-}
+    .about-comment {
+        padding: 60px 0;
+        margin-top: 40px;
+    }
 
-.btn-catalog:hover {
-    background: #ff8c42;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
-    color: white;
-}
+    .about-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .about-title {
+        color: #ff6b35;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        position: relative;
+    }
+
+    .about-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        border-radius: 2px;
+    }
+
+    .about-text {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        text-align: justify;
+    }
+
+    .about-items {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eaeaea;
+    }
+
+    .item-icon {
+        font-size: 2.5rem;
+        background: #ff6b35;
+        color: white;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+
+    .item-icon-comment {
+        font-size: 2.5rem;
+        background: linear-gradient(45deg, #2c3e50, #34495e);
+        color: white;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+
+    .item-content {
+        flex: 1;
+    }
+
+    .item-text {
+        color: #444;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .item-text strong {
+        color: #ff6b35;
+        font-weight: 700;
+    }
+
+    .comment-rating {
+        display: flex;
+        gap: 5px;
+    }
+
+    .rating-star {
+        color: #ffd700;
+        font-size: 1.2rem;
+    }
+
+    .rental-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .rental-card {
+        background: white;
+        padding: 30px 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eaeaea;
+        text-align: center;
+    }
+
+    .rental-number {
+        width: 60px;
+        height: 60px;
+        background: #ff6b35;
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+
+    .rental-subtitle {
+        color: #2c3e50;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .rental-text {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
 
 @media (max-width: 768px) {
     .header-buttons {

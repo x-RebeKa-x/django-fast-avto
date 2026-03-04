@@ -7,16 +7,6 @@
 
 {% block content %}
 <div class="catalog-page">
-    <div class="header">
-        <div class="header-buttons">
-            <a href="{% url 'users:profile' %}" class="btn btn-profile">Профиль</a>
-            {% if user.is_authenticated %}
-            <a class="btn btn-logout" href="{% url 'users:logout' %}">Выйти</a>
-            {% else %}
-            <a class="btn btn-logout" href="{% url 'users:login' %}">Войти</a>
-            {% endif %}
-        </div>
-    </div>
     <h1 class="catalog-title">Рекомендовано</h1>
     <div class="image-container">
         {% for car in cars %}
@@ -35,10 +25,198 @@
         </div>
         {% endfor %}
     </div>
-    <div class="catalog-footer">
-        <a href="{% url 'cars:index' %}" class="btn-catalog">
-            Перейти к каталогу
-        </a>
+</div>
+<div class="about-section">
+    <div class="about-container">
+        <h2 id="" class="about-title">Комментарии</h2>
+        <div class="about-items">
+            <div class="about-item">
+                <div class="item-icon-comment">👩</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        Отличный сервис! Брала Kia Rio на выходные, машина в идеальном состоянии, чистая, заправленная.
+                        Процесс бронирования занял 5 минут. Обязательно обращусь еще!
+                    </p>
+                    <div class="comment-rating">
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <div class="item-icon-comment">👨</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        Брал Jaguar XJ для деловой поездки. Автомобиль комфортный, чистый.
+                        Отдельное спасибо за оперативность и приятные цены. Рекомендую!
+                    </p>
+                    <div class="comment-rating">
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <div class="item-icon-comment">👩</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        Очень довольна арендой Audi TT. Машина экономичная, удобная для города.
+                        В офисе встретили приветливо, все объяснили. Буду рекомендовать друзьям!
+                    </p>
+                    <div class="comment-rating">
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <div class="item-icon-comment">🧔</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        Арендовал Xcite X-Cross 7 для поездки за город. Внедорожник в отличном состоянии,
+                        проходимость супер. Цена соответствует качеству. Спасибо!
+                    </p>
+                    <div class="comment-rating">
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                        <span class="rating-star">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-comment">
+    <div class="about-container">
+        <h2 id="about" class="about-title">О нас</h2>
+        <p class="about-text">
+            <strong>FastAvto</strong> — это современный сервис аренды автомобилей, который помогает вам быстро и удобно
+            выбрать машину
+            для любых целей. Мы предлагаем широкий выбор автомобилей различных классов — от экономичных до премиальных.
+            Наша миссия — сделать процесс аренды максимально простым, прозрачным и приятным для каждого клиента. Мы
+            гарантируем высокое качество обслуживания, чистоту и техническую исправность каждого автомобиля.
+            Присоединяйтесь к тысячам довольных клиентов FastAvto и путешествуйте с комфортом!
+        </p>
+        <h2 class="about-title">Категории машин</h2>
+        <div class="about-items">
+            <div class="about-item">
+                <div class="item-icon">⭐</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        <strong>Эконом-класс</strong> — идеальны для поездок по городу, встреч или деловых
+                        поездок; подойдут, когда нужно взять машину в прокат на короткий рейс
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <div class="item-icon">✨</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        <strong>Комфорт-класс</strong> — для тех, кто ценит удобство в каждой поездке;
+                        просторный салон, качественные материалы и плавность хода сделают любую дорогу приятной
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <div class="item-icon">🏆</div>
+                <div class="item-content">
+                    <p class="item-text">
+                        <strong>Премиум-класс</strong> — максимальный уровень роскоши и технологий; для важных встреч,
+                        особых событий и тех, кто привык к лучшему
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-section">
+    <div class="about-container">
+        <h2 class="about-title">Варианты аренды</h2>
+        <div class="rental-grid">
+            <div class="rental-card">
+                <div class="rental-number">1</div>
+                <h3 class="rental-subtitle">Аренда авто посуточно</h3>
+                <p class="rental-text">
+                    Подходит для поездок по городу, командировок и выходных. Выберите даты, класс автомобиля и оформите
+                    бронирование онлайн за пару минут.
+                </p>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-number">2</div>
+                <h3 class="rental-subtitle">Аренда авто на неделю</h3>
+                <p class="rental-text">
+                    Удобный вариант, если нужен автомобиль на отпуск или длительную поездку. Тариф на 7 дней часто
+                    выгоднее,
+                    чем несколько отдельных суток.
+                </p>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-number">3</div>
+                <h3 class="rental-subtitle">Аренда авто на месяц</h3>
+                <p class="rental-text">
+                    Оптимально для работы, переезда или жизни в городе без личной машины. Доступны помесячные условия и
+                    гибкие тарифы по сроку аренды.
+                </p>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-number">4</div>
+                <h3 class="rental-subtitle">Долгосрочная аренда авто</h3>
+                <p class="rental-text">
+                    Для тех, кому автомобиль нужен на несколько месяцев и дольше. Это самый выгодный формат по цене за
+                    день
+                    и удобен для регулярных поездок.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-comment">
+    <div class="about-container">
+        <h2 class="about-title">Оформление аренды</h2>
+        <div class="rental-grid">
+            <div class="rental-card">
+                <div class="rental-number">🚗</div>
+                <h4 class="rental-subtitle">Выберите автомобиль, который вам понравился</h4>
+
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-number">📅</div>
+                <h4 class="rental-subtitle">Укажите адрес филиала, дату, время получение и окончания</h4>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-number">💳</div>
+                <h4 class="rental-subtitle">Перекинет на форму оплаты. Если оплата картой, то машина будет оплачена
+                    сразу,
+                    а если наличными в салоне оплачиваете
+                </h4>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-number">🔑</div>
+                <h3 class="rental-subtitle">Приезжайте в назначенный срок и забирайте автомобиль</h3>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

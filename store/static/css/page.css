@@ -9,23 +9,6 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    background: white;
-    border-radius: 10px;
-}
-
-.logo {
-    color: #ff6b35;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: none;
-    letter-spacing: 2px;
-    text-align: start;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
 .logo_2 {
     color: black;
     text-align: end;
@@ -106,7 +89,6 @@ header {
     font-weight: 600;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin: 20px;
     align-self: center;
     width: calc(100% - 40px);
@@ -115,7 +97,6 @@ header {
 
 .book-btn:hover {
     background: linear-gradient(45deg, #ff8c42, #ff6b35);
-    transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
 }
 
@@ -237,48 +218,6 @@ header {
     }
 }
 
-.cars-header {
-    background: linear-gradient(45deg, #2c3e50, #34495e);
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.cars-header .logo {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.back-button {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 12px 25px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.back-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #ff6b35;
-    transform: translateX(-5px);
-}
-
-.header-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
 .image-container {
     padding: 40px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -286,7 +225,6 @@ header {
 }
 
 .widget-header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
     padding: 10px;
     border-radius: 14px;
 }
@@ -301,7 +239,7 @@ header {
 }
 
 .widget-header h1 {
-    color: white;
+    color: black;
     justify-content: center;
     display: flex;
     gap: 12px;
@@ -332,7 +270,6 @@ header {
 }
 
 .table-row:hover {
-    transform: translateX(-8px) scale(1.03);
     text-decoration: none;
     color: white;
     border-color: rgba(255, 255, 255, 0.3);
@@ -350,26 +287,6 @@ header {
     gap: 20px;
     flex-wrap: wrap;
     margin: 20px 0;
-}
-
-.comfort-row {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
-    border-left: 5px solid #7d3c98;
-}
-
-.comfort-row:hover {
-    background: linear-gradient(135deg, #8e44ad, #7d3c98);
-    box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
-}
-
-.premium-row {
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-    border-left: 5px solid #d35400;
-}
-
-.premium-row:hover {
-    background: linear-gradient(135deg, #e67e22, #d35400);
-    box-shadow: 0 10px 25px rgba(243, 156, 18, 0.3);
 }
 
 .row-icon {

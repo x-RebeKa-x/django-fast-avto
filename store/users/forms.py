@@ -49,9 +49,22 @@ class UserRegisterForm(UserCreationForm):
         fields = ("first_name", "last_name", "username", "password1", "password2")
 
 class UserProfileForm(UserChangeForm):
-    username = forms.CharField(widget=forms.TextInput(attrs={'readonly': True, 'class': 'profile-nickname'}))
-    first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'profile-fullname'}))
-    last_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'profile-fullname'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'readonly': True, 'class': 'profile-nickname', 'style': 'background-color: #737475;'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'profile-fullname',
+        'pattern': '[а-яА-Яa-zA-Z]+',
+        'title': 'Только буквы, без пробелов',
+        'minlength': '2',
+        'maxlength': '20',
+        })
+        , max_length=20, min_length=3, required=True)
+    last_name = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'profile-fullname',
+        'pattern': '[а-яА-Яa-zA-Z]+',
+        'title': 'Только буквы, без пробелов',
+        'minlength': '2',
+        'maxlength': '20',
+    }), max_length=20, min_length=3, required=True)
 
     class Meta:
         model = User

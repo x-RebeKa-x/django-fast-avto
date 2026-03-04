@@ -102,7 +102,6 @@ body {
     background: white;
     border-radius: 20px;
     padding: 50px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
     border: 1px solid #eaeaea;
 }
@@ -125,7 +124,6 @@ body {
 .profile-nickname {
     text-align: center;
     font-size: 2.8rem;
-    color: #2c3e50;
     font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 1px;
@@ -195,11 +193,9 @@ body {
     background: #f8f9fa;
     border-radius: 12px;
     border-left: 5px solid #2ecc71;
-    transition: all 0.3s ease;
 }
 
 .booking-item:hover {
-    transform: translateX(-5px);
     background: #e9ecef;
 }
 
@@ -286,7 +282,6 @@ body {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
     border: none;
     display: flex;
     align-items: center;
@@ -299,7 +294,6 @@ body {
 }
 
 .edit-button:hover {
-    transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
 }
 

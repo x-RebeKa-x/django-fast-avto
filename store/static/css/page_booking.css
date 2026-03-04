@@ -6,27 +6,6 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .btn-back {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 25px;
-        background: white;
-        color: #2c3e50;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        margin-bottom: 30px;
-        border: 2px solid #eaeaea;
-    }
-
-    .btn-back:hover {
-        border-color: #ff6b35;
-        color: #ff6b35;
-    }
-
     .car-detail-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -35,6 +14,12 @@
         border-radius: 30px;
         padding: 40px;
         border: 1px solid #eaeaea;
+    }
+
+    .car-detail-left {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
     .car-detail-image {
@@ -208,7 +193,6 @@
         font-size: 1.2rem;
         font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s ease;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -219,7 +203,6 @@
     }
 
     .submit-btn:hover {
-        transform: translateY(-3px);
         box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
     }
 

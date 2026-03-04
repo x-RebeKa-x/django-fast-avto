@@ -73,3 +73,9 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+def terms(request):
+    return render(request, 'users/terms_of_use.html')
+
+def privacy(request):
+    return render(request, 'users/privacy_policy.html')

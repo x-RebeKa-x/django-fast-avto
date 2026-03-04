@@ -158,6 +158,8 @@ def payment_page(request, car_id):
     if session_data and isinstance(session_data, dict):
         booking_data.update(session_data)
 
+    time_valid = True
+
     if not session_data and request.method == 'POST':
         address = request.POST.get('address')
         date = request.POST.get('date')
@@ -168,38 +170,53 @@ def payment_page(request, car_id):
         if all([address, date, time, date_end, time_end]):
             date_start_object = datetime.strptime(date, '%Y-%m-%d').date()
             date_end_object = datetime.strptime(date_end, '%Y-%m-%d').date()
-            days = (date_end_object - date_start_object).days
-            if days < 1:
-                days = 1
+            time_start_object = datetime.strptime(time, '%H:%M').time()
+            time_end_object = datetime.strptime(time_end, '%H:%M').time()
 
-            if days % 10 == 1 and days % 100 != 11:
-                days_word = 'день'
-            elif 2 <= days % 10 <= 4 and not (12 <= days % 100 <= 14):
-                days_word = 'дня'
+            if date_start_object == date_end_object and time_end_object <= time_start_object:
+                time_valid = False
+                booking_data = {
+                    'address': address,
+                    'date': date,
+                    'time': time,
+                    'date_end': date_end,
+                    'time_end': time_end,
+                }
+                messages.error(request, 'Время окончания должно быть позже времени получения')
             else:
-                days_word = 'дней'
+                days = (date_end_object - date_start_object).days
+                if days < 1:
+                    days = 1
 
-            total_price = car.price * days
+                if days % 10 == 1 and days % 100 != 11:
+                    days_word = 'день'
+                elif 2 <= days % 10 <= 4 and not (12 <= days % 100 <= 14):
+                    days_word = 'дня'
+                else:
+                    days_word = 'дней'
 
-            booking_data = {
-                'car_id': car.id,
-                'car_name': car.name,
-                'car_price': str(car.price),
-                'address': address,
-                'date': date,
-                'time': time,
-                'date_end': date_end,
-                'time_end': time_end,
-                'days': days,
-                'days_word': days_word,
-                'total_price': str(total_price),
-            }
+                total_price = car.price * days
 
-            request.session['booking_data'] = booking_data
+                booking_data = {
+                    'car_id': car.id,
+                    'car_name': car.name,
+                    'car_price': str(car.price),
+                    'address': address,
+                    'date': date,
+                    'time': time,
+                    'date_end': date_end,
+                    'time_end': time_end,
+                    'days': days,
+                    'days_word': days_word,
+                    'total_price': str(total_price),
+                }
+
+                request.session['booking_data'] = booking_data
 
     context = {
         'car': car,
         'booking': booking_data,
+        'time_valid': time_valid,
     }
 
     return render(request, "cars/payment_page.html", context)

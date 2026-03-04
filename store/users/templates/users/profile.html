@@ -7,20 +7,6 @@
 
 {% block content %}
 <div class="profile-container">
-
-    <div class="profile-header">
-        <h1 class="profile-title">Мой профиль</h1>
-        <div class="header-buttons">
-            <a href="{% url 'cars:index' %}" class="home-button">
-                ← В каталог
-            </a>
-            <a href="{% url 'users:login' %}" class="logout-button">
-                Выйти
-            </a>
-        </div>
-    </div>
-
-
     <form method="post" action="{% url 'users:profile' %}">
         {% csrf_token %}
         <div class="profile-info-card">
@@ -52,16 +38,6 @@
         </div>
     </form>
 
-
-    <div class="bookings-section">
-        {% if form.errors or messages %}
-        <div class="messages-container">
-            {% for msg in messages %}
-            <div class="error-message">{{ msg }}</div>
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% include "cars/basket.html" %}
-    </div>
+    {% include "cars/basket.html" %}
 </div>
 {% endblock %}
