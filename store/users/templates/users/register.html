@@ -21,7 +21,12 @@
         <div class="messages-container">
             {% for field, errors in form.errors.items %}
                 {% for error in errors %}
-                    <div class="error-message">{{ error }}</div>
+                    <div class="error-message">
+                        {{ error }}
+                        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 {% endfor %}
             {% endfor %}
         </div>

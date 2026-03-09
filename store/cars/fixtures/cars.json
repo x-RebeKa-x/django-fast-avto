@@ -338,6 +338,513 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-02-21T10:57:45.202Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-02-21T11:01:29.993Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-02-21T11:07:07.120Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "User4",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-02-21T11:07:09.479Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-02-21T11:07:14.160Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-02-21T11:36:56.555Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-02-21T11:37:00.914Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "19",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-02-21T12:05:48.187Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-02-21T12:05:54.178Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-02-21T12:05:57.484Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-02-21T12:09:10.649Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-02-21T12:09:16.899Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-02-21T12:09:20.403Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-02-21T12:32:47.701Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "30",
+    "object_repr": "User2234",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-02-21T12:32:52.069Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "29",
+    "object_repr": "User65",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-02-21T12:32:55.274Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "28",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-02-21T12:32:58.024Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-02-21T13:21:20.618Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "32",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-02-21T13:21:25.234Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "31",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-02-26T05:49:12.891Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "34",
+    "object_repr": "xcvxcv",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-02-26T05:49:20.092Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "33",
+    "object_repr": "Cemki_pb95",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-03-02T11:15:42.685Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Audi S4 | Премиум",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-03-02T11:19:13.367Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Ferrari 612 Scaglietti | Премиум",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-03-02T11:19:20.777Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Ferrari 612 Scaglietti | Премиум",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-03-02T11:20:48.524Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Mazda MX-5 | Эконом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-03-02T11:21:29.850Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "BMW M6 | Кофорт",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-03-02T11:22:55.121Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Jaguar XJ | Кофорт",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-03-02T11:24:09.972Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Nissan GT-R | Премиум",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-03-02T11:25:06.595Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Audi TT | Эконом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-03-02T11:25:56.740Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Xcite X-Cross 7 | Кофорт",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-03-02T11:26:33.795Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Ford Mustang V | Премиум",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-03-02T11:27:02.548Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Mercedes-Benz | Эконом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-03-02T11:27:48.426Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Jaguar XKR-S | Кофорт",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-03-02T11:28:23.656Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "AMG G 63 (Гелик) | Премиум",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-03-02T11:29:18.662Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "Daewoo Matiz | Эконом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-03-02T11:30:22.957Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Mercedes | Кофорт",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-03-02T11:31:06.164Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Kia Rio | Эконом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-03-08T12:42:37.195Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "37",
+    "object_repr": "416_cemkin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-03-08T12:43:06.729Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "35",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -735,10 +1242,10 @@
 },
 {
   "model": "sessions.session",
-  "pk": "1rye3gej18wr2exqmaqk355bqfv7qben",
+  "pk": "ej7w92o9ugufiw7ssojyx0r615yip3do",
   "fields": {
-    "session_data": ".eJxVjMEOwiAQRP-FsyGwiAsevfcbCLCLVA1NSnsy_rtt0oMeZ96beYsQ16WGtfMcRhJXocXpt0sxP7ntgB6x3SeZp7bMY5K7Ig_a5TARv26H-3dQY6_bGnQicwbLQDpr0l4DsiqMzhmFF1tKUlsklVyx4MF6kwozgleEBlF8vtSHN3g:1vskY5:dZQb4ugrP-Bld5ZJKusWF2pqkarEFkIG6St5ZlPyAPM",
-    "expire_date": "2026-03-04T16:37:13.783Z"
+    "session_data": ".eJxlkN1uwjAMhV9lynWpnKQhLZfc8waTqiR2aQc0U1s0TYh3X36KYOLmyPl87Ni-sdZcl769zjS1A7Id46x4Zda4E40xgV9mPPrS-XGZBltGS7lm5_Lgkc771fuvQW_mPlQLblFWQpFA7jjyhgtN0JGuawl6q7rOQngi2LpTohGqkbYj0qIB1FLr0NR6fxrGY4tmMWx3Y87kkVWRwtFcKHx0oMkR0swy_Z4GF7FQACVAoAZxonkO7PMKlYCokqJW_KmyTnFXfiSXTMymB9cplVE2m2cTKV7ipkgVYfF41jB4GgXEdgNyA01gy3DJbCfkamnzvd9sDy4e1t-wBM9B--MnXFeSVVKVFNOsLrbwizm_3eN-_wPbmJgC:1vzaaR:dIFLZfIpFHBnLPqWJg-CNdk6pCzFeBzmNWjxmYmbUao",
+    "expire_date": "2026-03-23T13:23:55.862Z"
   }
 },
 {
@@ -771,7 +1278,7 @@
   "fields": {
     "name": "Kia Rio",
     "image": "cars/cfb31e92025670882f654f18fa18feb6_sGq2eJT.jpg",
-    "description": "",
+    "description": "Секрет её невероятной популярности прост: удачное сочетание доступной цены, современного дизайна, богатого оснащения и неприхотливости в эксплуатации.",
     "short_description": "Компактный седан с экономичным расходом топлива. Идеален для города",
     "price": "1200.00",
     "quantity": 1,
@@ -784,7 +1291,7 @@
   "fields": {
     "name": "Mercedes",
     "image": "cars/642add34d47c22768557f9e42a3e615e_ieBgPix.png",
-    "description": "",
+    "description": "Это немецкая марка автомобилей премиум-класса, один из самых узнаваемых и значимых брендов в мировой истории автомобилестроения. Для многих людей во всём мире само понятие «автомобиль» неразрывно связано с этой трёхлучевой звездой.",
     "short_description": "Полная комплектация, кожаный салон, климат-контроль",
     "price": "2500.00",
     "quantity": 1,
@@ -797,7 +1304,7 @@
   "fields": {
     "name": "Audi S4",
     "image": "cars/1643705319_14-hdpic-club-p-mashini-na-belom-fone-19.png",
-    "description": "",
+    "description": "Audi S4 продолжает традиции модели, предлагая проверенную временем формулу: мощный V6, полный привод quattro и роскошный салон. Это автомобиль для тех, кому нужны эмоции от вождения каждый день, без ущерба для комфорта",
     "short_description": "Спортивный премиум-седан с динамичным характером и изысканным салоном",
     "price": "4000.00",
     "quantity": 1,
@@ -810,7 +1317,7 @@
   "fields": {
     "name": "Ferrari 612 Scaglietti",
     "image": "cars/1643705348_8-hdpic-club-p-mashini-na-belom-fone-10.jpg",
-    "description": "",
+    "description": "Это элегантное и роскошное купе, которое выпускалось с 2004 по 2011 год. Оно принадлежит к редкой для Ferrari категории автомобилей типа \"2+2\", то есть в нём с комфортом могут разместиться не только водитель и передний пассажир, но и двое взрослых сзади. Это делает его не просто суперкаром, а настоящим Gran Turismo — автомобилем для быстрых и стильных путешествий на дальние расстояния.",
     "short_description": "Роскошное спортивное купе 2+2 с мощным V12 и исключительным комфортом",
     "price": "5000.00",
     "quantity": 1,
@@ -823,7 +1330,7 @@
   "fields": {
     "name": "Mazda MX-5",
     "image": "cars/1643705360_29-hdpic-club-p-mashini-na-belom-fone-42.jpg",
-    "description": "",
+    "description": "Это самый популярный в мире небольшой двухместный родстер, выпускающийся с 1989 года. Автомобиль признан Книгой рекордов Гиннесса самым продаваемым двухместным спорткаром в истории. Главная идея, заложенная создателями в эту модель, называется \"Jinba Ittai\" — что можно перевести как \"единство всадника и лошади\". Инженеры стремились к тому, чтобы водитель чувствовал автомобиль продолжением себя: мгновенно откликался на руль, понимал поведение машины в каждом повороте и получал удовольствие от процесса управления.",
     "short_description": "Компактный спортивный родстер с отличной управляемостью, но без просторного салона.",
     "price": "2500.00",
     "quantity": 1,
@@ -836,7 +1343,7 @@
   "fields": {
     "name": "BMW M6",
     "image": "cars/1643705386_4-hdpic-club-p-mashini-na-belom-fone-6.png",
-    "description": "",
+    "description": "Это высокопроизводительная версия BMW 6-й серии, созданная спортивным подразделением BMW M GmbH. Это автомобиль для тех, кому нужна не просто роскошь и комфорт, а настоящая мощь и спортивный характер в элегантном кузове купе или кабриолета",
     "short_description": "Мощное премиум-купе с атмосферным V10, не для экономичной городской езды.",
     "price": "3500.00",
     "quantity": 1,
@@ -849,7 +1356,7 @@
   "fields": {
     "name": "Jaguar XJ",
     "image": "cars/1643705399_10-hdpic-club-p-mashini-na-belom-fone-15.png",
-    "description": "",
+    "description": "За свою полувековую историю модель стала воплощением британской аристократичности, элегантности и инженерной мысли.  Это был последний автомобиль, в создании которого участвовал основатель компании сэр Уильям Лайонс . Модель задумывалась как универсальный седан, который заменил сразу четыре предыдущие модели Jaguar",
     "short_description": "Полноразмерный роскошный седан представительского класса с мощным двигателем V8.",
     "price": "3200.00",
     "quantity": 1,
@@ -862,7 +1369,7 @@
   "fields": {
     "name": "Nissan GT-R",
     "image": "cars/1643705419_35-hdpic-club-p-mashini-na-belom-fone-52.jpg",
-    "description": "",
+    "description": "Это легендарный японский суперкар, который часто называют «Годзиллой» за его чудовищную мощь и бескомпромиссный характер . Это автомобиль, созданный не для показной роскоши, а для того, чтобы побеждать — на треке, на дороге и в сердцах поклонников.",
     "short_description": "Полноприводное спортивное купе с феноменальной динамикой и функциональным салоном.",
     "price": "4200.00",
     "quantity": 1,
@@ -875,7 +1382,7 @@
   "fields": {
     "name": "Audi TT",
     "image": "cars/1691940018_grizly-club-p-kartinki-krasnaya-mashina-bez-fona-1.png",
-    "description": "",
+    "description": "Это компактный спортивный автомобиль, который производился немецкой компанией Audi с 1998 по 2023 год . За четверть века модель стала настоящей иконой дизайна и одной из самых узнаваемых машин в истории бренда",
     "short_description": "Компактное спортивное купе с экономичным расходом топлива. Идеален для города.",
     "price": "2000.00",
     "quantity": 1,
@@ -888,7 +1395,7 @@
   "fields": {
     "name": "Xcite X-Cross 7",
     "image": "cars/Article_176477_860_575.jpg",
-    "description": "",
+    "description": "Внешность кроссовера можно назвать сдержанной и демократичной . Автомобиль получил узкие светодиодные фары, оригинальную решётку радиатора, 18-дюймовые колёсные диски, рейлинги на крыше и имитацию сдвоенных патрубков выхлопной системы",
     "short_description": "Компактный городской кроссовер с экономичным расходом топлива.",
     "price": "2600.00",
     "quantity": 1,
@@ -901,7 +1408,7 @@
   "fields": {
     "name": "Ford Mustang V",
     "image": "cars/ch-rnaya-mashina-na-belom-fone.jpg",
-    "description": "",
+    "description": "Это автомобиль, который вернул легендарному масл-кару его истинный дух. После нескольких десятилетий экспериментов с дизайном, Ford решил сделать ставку на ностальгию и создал современный мускул-кар с яркой внешностью в стиле «ретро-футуризм», отсылающей к классическим Мустангам конца 1960-х годов.",
     "short_description": "Культовый американский маслкар с мощным двигателем и просторным салоном.",
     "price": "4600.00",
     "quantity": 1,
@@ -914,7 +1421,7 @@
   "fields": {
     "name": "Mercedes-Benz",
     "image": "cars/foni-papik-pro-r3yl-p-kartinki-avto-na-prozrachnom-fone-4.png",
-    "description": "",
+    "description": "Это немецкая марка автомобилей премиум-класса, один из самых узнаваемых и значимых брендов в мировой истории . Для многих само понятие «автомобиль» неразрывно связано с этой компанией . Это не просто машины, а символ статуса, надежности и инженерного совершенства.",
     "short_description": "Роскошное премиум-купе с индивидуальным тюнингом и просторным салоном.",
     "price": "1400.00",
     "quantity": 1,
@@ -927,7 +1434,7 @@
   "fields": {
     "name": "Jaguar XKR-S",
     "image": "cars/foni-papik-pro-rbrb-p-kartinki-avto-na-prozrachnom-fone-19.png",
-    "description": "",
+    "description": "Это вершина линейки спортивных купе Jaguar XK, \"заряженная\" версия, которая стала самым мощным и быстрым серийным автомобилем британской марки на момент своего выхода . Это автомобиль для тех, кто хочет получить от Jaguar не просто элегантность и комфорт, а настоящую, почти гоночную агрессию и феноменальную динамику.",
     "short_description": "Эффектное спорткупе с мощным двигателем. Идеален для острых ощущений",
     "price": "3500.00",
     "quantity": 1,
@@ -940,7 +1447,7 @@
   "fields": {
     "name": "AMG G 63 (Гелик)",
     "image": "cars/png-klev-club-2aqp-p-belii-gelik-png-2.png",
-    "description": "",
+    "description": "Это высочайшая вершина легендарного G-класса, «заряженная» версия культового внедорожника, созданная спортивным подразделением Mercedes-AMG. Это уникальное сочетание неубиваемого армейского вездехода с роскошью премиального седана и мощью суперкара. Машину часто называют «Гелендваген» (от Geländewagen — «внедорожник») или просто «Гелик» .",
     "short_description": "Брутальный внедорожник с исключительными характеристиками. Идеален для демонстрации статуса",
     "price": "4300.00",
     "quantity": 1,
@@ -953,7 +1460,7 @@
   "fields": {
     "name": "Daewoo Matiz",
     "image": "cars/png-klev-club-2vpo-p-matiz-png-3.png",
-    "description": "",
+    "description": "Это южнокорейский малолитражный автомобиль, который производился с 1998 по 2015 год . В России и странах СНГ эта машина стала настоящей легендой — самым доступным и массовым способом пересесть с отечественного автопрома на иномарку . Это символ городской мобильности для миллионов людей.",
     "short_description": "Компактный хэтчбек с экономичным расходом топлива. Идеален для города",
     "price": "1000.00",
     "quantity": 1,
@@ -961,11 +1468,33 @@
   }
 },
 {
+  "model": "cars.basket",
+  "pk": 64,
+  "fields": {
+    "user": 1,
+    "car": 6,
+    "quantity": 1,
+    "created_timestamp": "2026-03-05T14:15:30.062Z",
+    "status": "pending"
+  }
+},
+{
+  "model": "cars.basket",
+  "pk": 65,
+  "fields": {
+    "user": 36,
+    "car": 16,
+    "quantity": 1,
+    "created_timestamp": "2026-03-08T12:33:26.404Z",
+    "status": "pending"
+  }
+},
+{
   "model": "users.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$1000000$DBmnibUP0AAzauHwr4unPd$tiK+fjtercOHZEuZ3ywCuWWRp6LVVrhFiTJdqbg9yos=",
-    "last_login": "2026-02-18T16:37:13.709Z",
+    "last_login": "2026-03-09T13:17:22.987Z",
     "is_superuser": true,
     "username": "Rebeka",
     "first_name": "",
@@ -983,11 +1512,11 @@
   "pk": 13,
   "fields": {
     "password": "pbkdf2_sha256$1000000$qQyeDnHY1kelmhOBIOEREh$6H9uSCyIq7vpLLJsTDQGRznpvVUkimU7SahR/Ov5+ns=",
-    "last_login": "2026-02-11T17:02:49.825Z",
+    "last_login": "2026-03-03T12:19:38.814Z",
     "is_superuser": false,
     "username": "User1",
-    "first_name": "Alexi",
-    "last_name": "Tsemkin",
+    "first_name": "фффф",
+    "last_name": "ффф",
     "email": "",
     "is_staff": false,
     "is_active": true,
@@ -1016,18 +1545,18 @@
 },
 {
   "model": "users.user",
-  "pk": 15,
+  "pk": 36,
   "fields": {
-    "password": "pbkdf2_sha256$1000000$qIOmOe9EMqe6PFnpX2fRBS$ndVFgFPC9VgkrAljv+EZPZvxv5N9jtGzswU3ihxh450=",
-    "last_login": "2026-02-10T17:52:18.373Z",
+    "password": "pbkdf2_sha256$1000000$f3mu1QUJCztb7j3cL0CscD$jfg+CxFHVdgoovu6+b4TgmjfwrWvvCL57XgVFRUYbVw=",
+    "last_login": "2026-03-08T12:32:22.188Z",
     "is_superuser": false,
-    "username": "User3",
+    "username": "Cemki_pb95",
     "first_name": "Maksim",
-    "last_name": "Tsemkin",
+    "last_name": "run",
     "email": "",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2026-02-10T17:52:16.977Z",
+    "date_joined": "2026-03-08T12:32:11.397Z",
     "groups": [],
     "user_permissions": []
   }

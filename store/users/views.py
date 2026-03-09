@@ -35,7 +35,6 @@ def register(request):
             user = authenticate(username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
-                messages.success(request, 'Ваш профиль создан')
                 return HttpResponseRedirect(reverse('users:login'))
     else:
         form = UserRegisterForm()
@@ -56,7 +55,6 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            messages.success(request, message='Ваш профиль создан')
             return HttpResponseRedirect(reverse('users:profile'))
     else:
         form = UserProfileForm(instance=request.user)

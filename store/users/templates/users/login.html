@@ -20,11 +20,21 @@
         <div class="messages-container">
             {% if messages %}
                 {% for msg in messages %}
-                    <div class="message">{{ msg }}</div>
+                    <div class="message">
+                        {{ msg }}
+                        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 {% endfor %}
             {% else %}
                 {% for error in form.non_field_errors %}
-                    <div class="error-message">{{ error }}</div>
+                    <div class="error-message">
+                        {{ error }}
+                        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 {% endfor %}
             {% endif %}
         </div>

@@ -1,0 +1,21 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-message">Извините, такой страницы не существует :(</h1>
+    <a href="{% url 'index' %}" class="home-btn">На главную</a>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+

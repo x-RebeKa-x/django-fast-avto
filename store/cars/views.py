@@ -55,19 +55,20 @@ def cars(request, category_id=None, page=1):
 def basket_add(request, car_id):
     car = Car.objects.get(id=car_id)
 
+    if Basket.objects.filter(user=request.user, status='active').exists():
+        messages.error(request, 'У вас уже есть забронированная машина')
+        return redirect('users:profile')
+
+    if Basket.objects.filter(user=request.user, status='pending').exists():
+        messages.error(request, 'У вас уже есть забронированная машина')
+        return redirect('users:profile')
+
     card_number = request.POST.get('card_number')
 
     if card_number:
         status = 'active'
     else:
         status = 'pending'
-
-    if Basket.objects.filter(user=request.user, status='active').exists():
-        messages.error(request, 'У вас уже есть забронированная машина')
-        return redirect('users:profile')
-    elif Basket.objects.filter(user=request.user, status='pending').exists():
-        messages.error(request, 'У вас уже есть забронированная машина')
-        return redirect('users:profile')
 
     basket, created = Basket.objects.get_or_create(
         user=request.user,
@@ -173,7 +174,7 @@ def payment_page(request, car_id):
             time_end_object = datetime.strptime(time_end, '%H:%M').time()
 
             if date_start_object == date_end_object and time_end_object < time_start_object:
-                raise ValidationError({'time_end_object': 'Время окончания не должно быть раньше начала'})
+                messages.error(request, 'Время окончания не должно быть раньше начала')
 
             days = (date_end_object - date_start_object).days
             if days < 1:
@@ -228,3 +229,6 @@ def cheque(request, car_id):
     }
 
     return render(request, "cars/cheque.html", context)
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
