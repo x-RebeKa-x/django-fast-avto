@@ -9,7 +9,6 @@
 {% block contentCategories %}
 <div class="widget-header">
     <h1> Категории</h1>
-
     <div class="header-buttons">
         <!--Этот for предназначен для отображения таблички с категориями-->
         {% for category in categories %}
@@ -29,6 +28,45 @@
 {% endblock %}
 
 {% block content %}
+<div class="element">
+    <div class="filter-row">
+        <span class="filter-label">Фильтр цен</span>
+        <div class="filter-options">
+            <a href="
+            {% if current_category %}
+                {% url 'cars:category' current_category %}?price=1000-2000
+            {% else %}
+                {% url 'cars:index' %}?price=1000-2000
+            {% endif %}" class="filter-link">
+                1 000 ₽ - 2 000 ₽
+            </a>
+            <a href="
+            {% if current_category %}
+                {% url 'cars:category' current_category %}?price=2000-3000
+            {% else %}
+                {% url 'cars:index' %}?price=2000-3000
+            {% endif %}" class="filter-link">
+                2 000 ₽ - 3 000 ₽
+            </a>
+            <a href="{% if current_category %}
+                {% url 'cars:category' current_category %}?price=3000-5000
+            {% else %}
+                {% url 'cars:index' %}?price=3000-5000
+            {% endif %}" class="filter-link">
+                3 000 ₽ - 5 000 ₽
+            </a>
+            <a href="
+            {% if current_category %}
+                {% url 'cars:category' current_category %}?price=5000
+            {% else %}
+                {% url 'cars:index' %}?price=5000
+            {% endif %}" class="filter-link">
+                более 5 000 ₽
+            </a>
+            <a href="{% url 'cars:index' %}" class="filter-link">Сбросить фильтр</a>
+        </div>
+    </div>
+</div>
 <div class="image-container">
     <!--Этот for предназначен для отображения всех карточек товара-->
     {% for car in cars %}
@@ -54,7 +92,7 @@
             <a class="page-link"
                href="
                {% if cars.has_previous %}
-                {% url 'cars:page' cars.previous_page_number %}
+                       {% url 'cars:page' cars.previous_page_number %}?price={{ current_price|default:'' }}
                {% else %}
                  #
                {% endif %}"
@@ -63,7 +101,10 @@
 
         {% for page in cars.paginator.page_range %}
         <li class="page-item {% if page == cars.number %} active {% endif %}">
-            <a class="page-link" href="{% url 'cars:page' page %}">{{ page }}</a>
+            <a class="page-link" href="
+                   {% url 'cars:page' page %}?price={{ current_price|default:'' }}">
+                {{ page }}
+            </a>
         </li>
         {% endfor %}
 
@@ -71,7 +112,7 @@
             <a class="page-link"
                href="
                {% if cars.has_next %}
-                {% url 'cars:page' cars.next_page_number %}
+                       {% url 'cars:page' cars.next_page_number %}?price={{ current_price|default:'' }}
                {% else %}
                  #
                {% endif %}"

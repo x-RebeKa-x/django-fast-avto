@@ -6,54 +6,55 @@
 {% endblock %}
 
 {% block content %}
+{% if form.errors or messages %}
+    <div class="messages-container">
+        {% for msg in messages %}
+        <div class="alert alert-warning alert-dismissible" style="margin-top: 50px;">
+            {{ msg }}
+            <!--onclick="this.parentElement.style.display='none'
+            Это часть кода написанная на js и она используется, чтобы скрывать сообщение-->
+            <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                    <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
 <div class="profile-container">
     <form method="post" action="{% url 'users:profile' %}">
         {% csrf_token %}
         <div class="profile-info-card">
-            <div class="profile-avatar">
-                {{ form.first_name.value|slice:":1" }}
-                {{ form.last_name.value|slice:":1" }}
-            </div>
-
-            <h2 class="profile-nickname">
-                {{ form.username }}
-            </h2>
-            <p class="profile-fullname">
-                {{ form.first_name}}
-                {{ form.last_name }}
-            </p>
-
-            <div class="profile-details">
-                <div class="detail-card">
-                    <h3>Информация организации</h3>
-                    <p>Адрес: Рязань, ул. Солнечная, 512</p>
-                    <p>Режим работы: с 6:00 до 00:00</p>
-                    <p>Телефон: +7 (999) 123-45-67</p>
+            <div class="profile-fields">
+                <div class="profile-field">
+                    <span class="profile-nickname"><label class="profile-nickname">Никнейм:</label>
+                        {{ form.username }}</span>
                 </div>
+                <div class="profile-field">
+                    <span class="profile-fullname"><label class="profile-fullname">Имя:</label>
+                        {{ form.first_name }}</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-name"><label class="profile-name">Фамилия:</label>
+                        {{ form.last_name }}</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-name"><label class="profile-name">Телефон:</label>
+                        {{ form.phone_number }}</span>
+                </div>
+                <label class="phone-text">телефон можно не заполнять</label>
             </div>
 
             <div class="profile-actions">
                 <button class="action-button edit-button">
+                    <span class="button-icon">✎</span>
                     Редактировать профиль
                 </button>
             </div>
         </div>
     </form>
-
-    {% if form.errors or messages %}
-    <div class="messages-container">
-        {% for msg in messages %}
-        <div class="error-message" role="alert">
-            {{ msg }}
-            <!--onclick="this.parentElement.style.display='none'
-            Это часть кода написанная на js и она используется, чтобы скрывать сообщение-->
-            <button type="button" class="close" onclick="this.parentElement.style.display='none'">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
     {% include "cars/basket.html" %}
 </div>
+
+<script src="{% static 'js/phone.js' %}"></script>
 {% endblock %}

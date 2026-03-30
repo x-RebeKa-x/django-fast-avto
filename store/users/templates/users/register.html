@@ -9,6 +9,21 @@
 {% block header %}{% endblock %}
 
 {% block content %}
+{% if form.errors %}
+<div class="messages-container">
+    {% for field, errors in form.errors.items %}
+        {% for error in errors %}
+            <div class="alert alert-warning alert-dismissible" style="margin-top: 50px;">
+                {{ error }}
+                <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endif %}
+
 <div class="register-wrapper">
     <div class="register-box">
         <div class="register-header">
@@ -17,46 +32,31 @@
             <p class="welcome-text">Зарегистрируйтесь для бронирования автомобилей</p>
         </div>
 
-        {% if form.errors %}
-        <div class="messages-container">
-            {% for field, errors in form.errors.items %}
-                {% for error in errors %}
-                    <div class="error-message">
-                        {{ error }}
-                        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {% endfor %}
-            {% endfor %}
-        </div>
-        {% endif %}
-
         <form id="registerForm" class="register-form" method="POST" action="{% url 'users:register' %}">
             {% csrf_token %}
 
             <div class="input-wrapper">
-                <label>Никнейм</label>
+                <label class="wrapper">Никнейм</label>
                 {{ form.username }}
             </div>
 
             <div class="input-wrapper">
-                <label>Имя</label>
+                <label class="wrapper">Имя</label>
                 {{ form.first_name }}
             </div>
 
             <div class="input-wrapper">
-                <label>Фамилия</label>
+                <label class="wrapper">Фамилия</label>
                 {{ form.last_name }}
             </div>
 
             <div class="input-wrapper">
-                <label>Пароль</label>
+                <label class="wrapper">Пароль</label>
                 {{ form.password1 }}
             </div>
 
             <div class="input-wrapper">
-                <label>Повторить пароль</label>
+                <label class="wrapper">Повторить пароль</label>
                 {{ form.password2 }}
             </div>
 

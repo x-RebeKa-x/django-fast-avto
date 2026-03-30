@@ -4,54 +4,7 @@
     margin: 0 auto;
     padding: 20px;
     min-height: 100vh;
-}
-
-.header {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
-}
-
-.header-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-profile {
-    background: #ff6b35;
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-}
-
-.btn-profile:hover {
-    background: #ff8c42;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-    color: white;
-}
-
-.btn-logout {
-    background: white;
-    color: #ff6b35;
-    border: 2px solid #ff6b35;
-}
-
-.btn-logout:hover {
-    background: #fff0e6;
-    transform: translateY(-3px);
-    color: #ff6b35;
+    box-sizing: border-box;
 }
 
 .catalog-title {
@@ -69,6 +22,7 @@
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
+    padding-left: 50px;
 }
 
 .item {
@@ -126,22 +80,6 @@
     padding: 10px;
     border-radius: 8px;
     border: 2px solid #ffe0d4;
-}
-
-.book-btn {
-    background: linear-gradient(45deg, #ff6b35, #ff8c42);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 20px;
-    align-self: center;
-    width: calc(100% - 40px);
-    letter-spacing: 1px;
 }
 
 .book-btn {

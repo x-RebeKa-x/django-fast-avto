@@ -6,6 +6,27 @@
 {% endblock %}
 
 {% block content %}
+<div class="messages-container">
+    {% if time_error %}
+    <div class="alert alert-warning alert-dismissible" style="margin-top: 50px;">
+        {{ time_error }}
+        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+</div>
+<div class="messages-container">
+    {% if date_error %}
+    <div class="alert alert-warning alert-dismissible" style="margin-top: 50px;">
+        {{ date_error }}
+        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+</div>
+
 <div class="car-detail">
     <!--Реализация показа карточки автомобиля из бд-->
     <div class="car-detail-container">
@@ -84,9 +105,6 @@
                                    required
                                    min="06:00"
                                    max="00:00">
-                            <div class="error-message" id="time_end_error">
-                                Время окончания не может быть раньше времени получения
-                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -102,5 +120,4 @@
     </div>
 </div>
 
-<script src="{% static 'js/page.js' %}"></script>
 {% endblock %}

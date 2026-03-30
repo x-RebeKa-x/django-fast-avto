@@ -15,7 +15,6 @@ def login(request):
             user = authenticate(request, username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
-                messages.success(request, 'Ваш профиль создан')
                 return HttpResponseRedirect(reverse('index'))
     else:
         form = UserLoginForm()
@@ -33,6 +32,7 @@ def register(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
+            messages.success(request, 'Ваш профиль создан')
             if user and user.is_active:
                 auth.login(request, user)
                 return HttpResponseRedirect(reverse('users:login'))

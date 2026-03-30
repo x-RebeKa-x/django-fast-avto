@@ -1,5 +1,8 @@
 from django.contrib.auth.models import AbstractUser
-from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 class User(AbstractUser):
-    pass
+    phone_number = PhoneNumberField(blank=True, null=True, help_text="Введите номер телефона", region='RU')
+
+    def __str__(self):
+        return self.username

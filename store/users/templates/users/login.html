@@ -8,6 +8,30 @@
 {% block header %}{% endblock %}
 
 {% block content %}
+{% if form.errors or messages %}
+<div class="messages-container">
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert" style="margin-top: 50px;">
+                {{ msg }}
+                <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% else %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-warning alert-dismissible" style="margin-top: 50px;">
+                {{ error }}
+                <button type="button" class="close" onclick="this.parentElement.style.display='none'">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endif %}
+
 <div class="login-wrapper">
     <div class="login-box">
         <div class="login-header">
@@ -16,39 +40,15 @@
             <p class="welcome-text">Войдите в свой аккаунт для бронирования автомобилей</p>
         </div>
 
-        {% if form.errors or messages %}
-        <div class="messages-container">
-            {% if messages %}
-                {% for msg in messages %}
-                    <div class="message">
-                        {{ msg }}
-                        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {% endfor %}
-            {% else %}
-                {% for error in form.non_field_errors %}
-                    <div class="error-message">
-                        {{ error }}
-                        <button type="button" class="close" onclick="this.parentElement.style.display='none'">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        </div>
-        {% endif %}
-
         <form id="loginForm" class="login-form" method="post" action="{% url 'users:login' %}">
             {% csrf_token %}
             <div class="input-wrapper">
-                <label>Никнейм</label>
+                <label class="wrapper">Никнейм</label>
                 {{ form.username }}
             </div>
 
             <div class="input-wrapper">
-                <label>Пароль</label>
+                <label class="wrapper">Пароль</label>
                 {{ form.password }}
             </div>
 

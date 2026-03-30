@@ -11,7 +11,7 @@
                     <a href="{% url 'cars:cheque' basket.car.id %}" class="booking-status">Показать чек</a>
                 </div>
                 <div class="active-status">Оплачено</div>
-                <a href="{% url 'cars:basket_delete' basket.id %}" class="btn-icon">🗑</a>
+                <a href="{% url 'cars:basket_delete' basket.id %}" class="buck">🗑️</a>
             </div>
             {% else %}
              <div class="process-booking-item">
@@ -20,7 +20,7 @@
                     <a href="{% url 'cars:cheque' basket.car.id %}" class="booking-status">Показать чек</a>
                 </div>
                 <div class="process-status">Оплатите в салоне</div>
-                <a href="{% url 'cars:basket_delete' basket.id %}" class="btn-icon">🗑</a>
+                <a href="{% url 'cars:basket_delete' basket.id %}" class="buck">🗑️</a>
             </div>
             {% endif %}
         </div>

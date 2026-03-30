@@ -1,12 +1,11 @@
 from lib2to3.fixes.fix_input import context
 
 from django.contrib import messages
-from django.core.exceptions import ValidationError
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from cars.models import CarCategory, Car, Basket
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from datetime import datetime
 
 
@@ -23,7 +22,7 @@ def index(request, category_id=None, page=1):
 
     filtered_cars = filtered_cars.order_by('?')
 
-    paginator = Paginator(filtered_cars, 5)
+    paginator = Paginator(filtered_cars, 3)
     cars_paginator = paginator.page(page)
 
     context['cars'] = cars_paginator
@@ -33,9 +32,14 @@ def index(request, category_id=None, page=1):
 
 def cars(request, category_id=None, page=1):
     # Этот context нужен для карточек товара и отображения всех категорий, которые находятся в базе данных
+    price_range = request.GET.get('price')
+
     context = {
         'title': 'Car | Categories',
         'categories': CarCategory.objects.all(),
+        'current_category': category_id,
+        'current_price': price_range,
+        'page': page,
     }
 
     if category_id:
@@ -43,8 +47,25 @@ def cars(request, category_id=None, page=1):
     else:
         filtered_cars = Car.objects.all()
 
-    paginator = Paginator(filtered_cars, 6)
-    cars_paginator = paginator.page(page)
+    if price_range:
+        if price_range == '1000-2000':
+            filtered_cars = filtered_cars.filter(price__gte=1000, price__lte=2000)
+        elif price_range == '2000-3000':
+            filtered_cars = filtered_cars.filter(price__gte=2000, price__lte=3000)
+        elif price_range == '3000-5000':
+            filtered_cars = filtered_cars.filter(price__gte=3000, price__lte=5000)
+        elif price_range == '5000':
+            filtered_cars = filtered_cars.filter(price__gte=5000)
+
+    paginator = Paginator(filtered_cars, 9)
+
+    try:
+        cars_paginator = paginator.page(page)
+    except PageNotAnInteger:
+        cars_paginator = paginator.page(1)
+    except EmptyPage:
+        cars_paginator = paginator.page(paginator.num_pages)
+
 
     context['cars'] = cars_paginator
 
@@ -102,6 +123,7 @@ def page_booking(request, car_id):
 
         date_start_object = datetime.strptime(date, '%Y-%m-%d')
         date_end_object = datetime.strptime(date_end, '%Y-%m-%d')
+
         days = (date_end_object - date_start_object).days
         if days < 1:
             days = 1
@@ -130,7 +152,6 @@ def page_booking(request, car_id):
             'payment_method': payment_method,
         }
 
-        messages.success(request, 'Машина забронирована')
         return redirect('users:profile', car_id=car_id.id)
 
     context = {
@@ -174,7 +195,26 @@ def payment_page(request, car_id):
             time_end_object = datetime.strptime(time_end, '%H:%M').time()
 
             if date_start_object == date_end_object and time_end_object < time_start_object:
-                messages.error(request, 'Время окончания не должно быть раньше начала')
+                time_error = 'Время возврата не может быть раньше времени получения в один и тот же день'
+
+                context = {
+                    'car': car,
+                    'time_error': time_error,
+                    'now': datetime.now(),
+                }
+                return render(request, "cars/page_booking.html", context)
+
+            if date_start_object > date_end_object:
+                date_error = "Дата возврата не может быть раньше получения"
+
+                context = {
+                    'car': car,
+                    'date_error': date_error,
+                    'now': datetime.now(),
+                }
+
+                return render(request, 'cars/page_booking.html', context)
+
 
             days = (date_end_object - date_start_object).days
             if days < 1:
@@ -229,6 +269,7 @@ def cheque(request, car_id):
     }
 
     return render(request, "cars/cheque.html", context)
+
 
 def custom_404(request, exception):
     return render(request, '404.html', status=404)

@@ -8,13 +8,16 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     padding: 20px;
+    margin: 0;
 }
 
 .register-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     max-width: 1200px;
     width: 100%;
@@ -56,13 +59,23 @@ body {
 }
 
 .register-form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     width: 100%;
 }
 
 .input-wrapper {
     position: relative;
+}
+
+label.wrapper {
+    margin-top: 15px;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.3px;
 }
 
 .input-wrapper input {
@@ -97,12 +110,10 @@ body {
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-top: 20px;
 }
 
 .register-button:hover {
-    transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
@@ -126,18 +137,59 @@ body {
 .messages-container {
     margin: 0 0 25px 0;
     width: 100%;
-    max-width: 400px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.error-message {
-    color: #e53e3e;
-    font-size: 0.95rem;
-    padding: 8px 0;
-    margin-bottom: 5px;
-    text-align: center;
-    font-weight: 500;
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-warning hr {
+    border-top-color: #ffe8a1;
+}
+
+.alert-warning .alert-link {
+    color: #533f03;
+}
+
+.alert-dismissible {
+    padding-right: 3rem;
+    position: relative;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #333;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+    font-weight: 600;
 }
 
 @media (max-width: 992px) {

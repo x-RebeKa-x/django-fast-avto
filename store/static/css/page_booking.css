@@ -1,3 +1,61 @@
+    .messages-container {
+        margin: 0 0 25px 0;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .alert {
+        position: relative;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+
+    .alert-warning {
+        color: #856404;
+        background-color: #fff3cd;
+        border-color: #ffeeba;
+    }
+
+    .alert-warning hr {
+        border-top-color: #ffe8a1;
+    }
+
+    .alert-warning .alert-link {
+        color: #533f03;
+    }
+
+    .alert-dismissible {
+        padding-right: 3rem;
+        position: relative;
+    }
+
+    .alert-dismissible .close {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: #333;
+        background: rgba(0, 0, 0, 0.2);
+        opacity: 0.8;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s ease;
+        font-weight: 600;
+    }
+
     .car-detail {
         max-width: 1400px;
         margin: 0 auto;
@@ -170,15 +228,6 @@
         font-weight: 600;
         border-color: #ff6b35;
         cursor: default;
-    }
-
-    .error-message {
-        color: #e53e3e;
-        font-size: 0.95rem;
-        padding: 8px 0;
-        margin-bottom: 5px;
-        font-weight: 500;
-        border-bottom: 1px dashed #fed7d7;
     }
 
     .form-text {

@@ -845,6 +845,526 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-03-12T17:59:04.779Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "39",
+    "object_repr": "User8",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-03-12T17:59:08.238Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "38",
+    "object_repr": "User6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-03-12T18:02:11.255Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "41",
+    "object_repr": "User8",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-03-12T18:02:15.269Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "40",
+    "object_repr": "User6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-03-15T11:02:35.001Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "Jeep Cherokee | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-03-15T11:03:44.860Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "Changan CS75 Plus | Кофорт",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-03-15T11:04:22.108Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "6",
+    "object_repr": "Минивены",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-03-15T11:08:57.020Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "Nissan Serena | Минивены",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-03-15T11:10:07.344Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "Toyota Isis | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-03-15T11:12:13.596Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "BMW i8 | Эконом",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-03-15T11:12:57.042Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "24",
+    "object_repr": "Kia Rio | Эконом",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-03-15T11:14:24.303Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "25",
+    "object_repr": "Jeep Wrangler | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-03-15T11:14:44.334Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "7",
+    "object_repr": "Джипы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-03-15T11:14:53.093Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "25",
+    "object_repr": "Jeep Wrangler | Джипы",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-03-15T11:14:58.267Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "Jeep Cherokee | Джипы",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-03-15T11:15:10.935Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "AMG G 63 (Гелик) | Джипы",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-03-15T11:16:48.427Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "26",
+    "object_repr": "Mercedes-Benz CL | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-03-15T11:17:48.066Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "27",
+    "object_repr": "Toyota Tacoma | Джипы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-03-15T11:18:51.354Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "28",
+    "object_repr": "Lexus GS | Кофорт",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-03-15T11:19:43.816Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "29",
+    "object_repr": "Toyota FCV Concept | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-03-15T11:21:05.133Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "30",
+    "object_repr": "Ford Mustang 6 | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-03-15T11:22:17.578Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "31",
+    "object_repr": "Subaru Impreza WRX STI | Премиум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-03-15T11:23:11.286Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "32",
+    "object_repr": "Jeep Wrangler | Джипы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-03-15T11:23:59.192Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "33",
+    "object_repr": "Land Rover Defender 110 | Джипы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-03-15T11:25:25.137Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "34",
+    "object_repr": "Volkswagen Multivan (T6) | Минивены",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-03-15T11:26:19.657Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "35",
+    "object_repr": "Mercedes-Benz Metris 2017 | Минивены",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-03-15T17:51:28.011Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "43",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-03-15T17:51:31.243Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "42",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-03-23T17:02:43.847Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "44",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-03-23T17:16:21.458Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "47",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-03-23T17:16:25.427Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "46",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-03-23T17:16:29.270Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "45",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-03-23T17:42:56.560Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "50",
+    "object_repr": "Use9",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-03-23T17:43:00.067Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "49",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-03-23T17:43:03.128Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "48",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-03-23T17:49:22.436Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "53",
+    "object_repr": "User7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-03-23T17:49:28.862Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "52",
+    "object_repr": "User6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-03-23T17:49:32.464Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "51",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-03-23T18:39:32.965Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "55",
+    "object_repr": "User8",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-03-23T18:39:35.755Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "54",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -1242,10 +1762,10 @@
 },
 {
   "model": "sessions.session",
-  "pk": "ej7w92o9ugufiw7ssojyx0r615yip3do",
+  "pk": "vomdemkhl300gw077n5k8e3gk6v8zcv2",
   "fields": {
-    "session_data": ".eJxlkN1uwjAMhV9lynWpnKQhLZfc8waTqiR2aQc0U1s0TYh3X36KYOLmyPl87Ni-sdZcl769zjS1A7Id46x4Zda4E40xgV9mPPrS-XGZBltGS7lm5_Lgkc771fuvQW_mPlQLblFWQpFA7jjyhgtN0JGuawl6q7rOQngi2LpTohGqkbYj0qIB1FLr0NR6fxrGY4tmMWx3Y87kkVWRwtFcKHx0oMkR0swy_Z4GF7FQACVAoAZxonkO7PMKlYCokqJW_KmyTnFXfiSXTMymB9cplVE2m2cTKV7ipkgVYfF41jB4GgXEdgNyA01gy3DJbCfkamnzvd9sDy4e1t-wBM9B--MnXFeSVVKVFNOsLrbwizm_3eN-_wPbmJgC:1vzaaR:dIFLZfIpFHBnLPqWJg-CNdk6pCzFeBzmNWjxmYmbUao",
-    "expire_date": "2026-03-23T13:23:55.862Z"
+    "session_data": ".eJzNUV1vmzAU_SuVn1PkL2LgbV3VblFTVa26ZdIkdI1twpJgakBRVOW_1ximpKv6vpej63PPvZx7eEU59N0671vt8kqhDBE0O-ckFBtdDw31B-rSRoWtO1fJaJBEU7eNllbp7dWkfbdgDe3aT1MiFeM01lSRgiiSEio0NlokCcNiHhsjsX8qLBMT05TGKZNGa0FTrAQTwi-V1m6quswVdICyV1TAaJngWahr2Gn_pQWUPbiL1QKNdOOqYuAZxTjC2LOglNNt67nfPeYUD8j0gJyckCWhNtFFULHAyfAgIrRGahTDaQmjZ3U6CxP-9CFYb32wQjGdX2J2Seee66pgm_CM0UmSj4l_kE08mf-VHvwRZCzyvXVqOonxgHFAFbwWwwrbwfZDHscZauCw03WXG-t2p3hbZ3aVUlu9B6c763-tn4LVhj225hYfuqfl1_bXsmkASvE9-fET2B7u727KZwv2JXFf7m_k9erhdkO_pU2zIM1z75aP_1X8_Cz-OOPsk_j5P_GzjHN0PL4B13X0Kg:1w4zzo:ER_l_4JQLZipofnO8OJJcIaBbOa8OkVP-ODDYedbnC4",
+    "expire_date": "2026-04-07T11:32:28.525Z"
   }
 },
 {
@@ -1269,6 +1789,22 @@
   "pk": 5,
   "fields": {
     "name": "Премиум",
+    "description": ""
+  }
+},
+{
+  "model": "cars.carcategory",
+  "pk": 6,
+  "fields": {
+    "name": "Минивены",
+    "description": ""
+  }
+},
+{
+  "model": "cars.carcategory",
+  "pk": 7,
+  "fields": {
+    "name": "Джипы",
     "description": ""
   }
 },
@@ -1451,7 +1987,7 @@
     "short_description": "Брутальный внедорожник с исключительными характеристиками. Идеален для демонстрации статуса",
     "price": "4300.00",
     "quantity": 1,
-    "category": 5
+    "category": 7
   }
 },
 {
@@ -1468,14 +2004,224 @@
   }
 },
 {
-  "model": "cars.basket",
-  "pk": 64,
+  "model": "cars.car",
+  "pk": 19,
   "fields": {
-    "user": 1,
-    "car": 6,
+    "name": "Jeep Cherokee",
+    "image": "cars/images_1.jpeg",
+    "description": "Автомобиль прошел внедорожную подготовку (тюнинг): установлены усиленные бамперы, расширители колесных арок и специальные грязевые шины большого диаметра для экстремального офф-роуда. \r\nВ стоковом варианте модель оснащалась бензиновыми (чаще всего 3.7 л V6) или дизельными (2.8 л CRD) двигателями. Внутри салон ориентирован на практичность, предлагая достаточно места для пяти пассажиров и багажа",
+    "short_description": "Автомобиль прошел внедорожную подготовку (тюнинг): установлены усиленные бамперы, расширители колесных арок и специальные грязевые шины большого диаметра для экстремального офф-роуда.",
+    "price": "6000.00",
     "quantity": 1,
-    "created_timestamp": "2026-03-05T14:15:30.062Z",
-    "status": "pending"
+    "category": 7
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 20,
+  "fields": {
+    "name": "Changan CS75 Plus",
+    "image": "cars/images_2.jpeg",
+    "description": "Автомобиль четвертого поколения заметно увеличился в габаритах: длина составляет 4770 мм, а колесная база — 2800 мм. Дизайн выполнен в футуристичном стиле с вертикальными блоками фар и горизонтальными светодиодными полосами. \r\nВ интерьере акцент сделан на премиальность: отделка кожей Nappa, панорамная крыша и расширенный пакет «зимних» опций (подогрев всех сидений, руля и лобового стекла). Безопасность обеспечивают 6 подушек и комплекс электронных ассистентов, включая систему автоматического торможения и мониторинг слепых зон.",
+    "short_description": "В интерьере акцент сделан на премиальность: отделка кожей Nappa, панорамная крыша и расширенный пакет «зимних» опций (подогрев всех сидений, руля и лобового стекла). Безопасность обеспечивают 6 подуше",
+    "price": "3000.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 21,
+  "fields": {
+    "name": "Nissan Serena",
+    "image": "cars/images_3.jpeg",
+    "description": "Это популярный семейный минивэн, который ценится за просторный салон, отличную обзорность и экономичность для своего класса. В модификации Lifecare автомобиль оснащен механизмом, который с помощью электропривода выносит кресло за пределы салона, облегчая посадку. \r\nГабариты автомобиля составляют примерно 4685 мм в длину и 1695 мм в ширину, что позволяет ему оставаться маневренным в городских условиях. Средний расход топлива составляет около 6.6 л на 100 км (в смешанном цикле для гибридных версий). Салон рассчитан на 7–8 мест, а при сложенных задних сиденьях образуется внушительный объем для багажа",
+    "short_description": "Nissan Serena C26 — это популярный семейный минивэн, который ценится за просторный салон, отличную обзорность и экономичность для своего класса",
+    "price": "3400.00",
+    "quantity": 1,
+    "category": 6
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 22,
+  "fields": {
+    "name": "Toyota Isis",
+    "image": "cars/images_4.jpeg",
+    "description": "Toyota Isis спроектирована как максимально практичный семейный автомобиль. Уникальная конструкция кузова позволяет легко загружать крупногабаритные предметы, а сиденья третьего ряда полностью убираются под пол, образуя ровную площадку. Модель оснащается сдвижными задними дверями, которые часто имеют электропривод. Несмотря на компактные для минивэна размеры (длина около 4.6 м), салон остается просторным и функциональным",
+    "short_description": "Toyota Isis спроектирована как максимально практичный семейный автомобиль. Уникальная конструкция кузова позволяет легко загружать крупногабаритные предметы",
+    "price": "4000.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 23,
+  "fields": {
+    "name": "BMW i8",
+    "image": "cars/images_5.jpeg",
+    "description": "Модель полностью повторяет футуристический дизайн концепт-кара BMW i8, включая характерную форму кузова, фирменную решетку радиатора и детализацию интерьера",
+    "short_description": "Модель полностью повторяет футуристический дизайн концепт-кара BMW i8, включая характерную форму кузова, фирменную решетку радиатора и детализацию интерьера",
+    "price": "2000.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 24,
+  "fields": {
+    "name": "Kia Rio",
+    "image": "cars/images_6.jpeg",
+    "description": "Kia Rio этого поколения ценится за оптимальное соотношение цены и качества. Несмотря на статус бюджетного авто, салон выполнен из добротных материалов, а эргономика водительского места интуитивно понятна. Модель обладает неплохой динамикой для своего класса и достаточно вместительным багажником (около 390 литров). В базовое оснащение обычно входят гидроусилитель руля и кондиционер, а в более дорогих версиях — полный электропакет и ABS",
+    "short_description": "Kia Rio этого поколения ценится за оптимальное соотношение цены и качества. Несмотря на статус бюджетного авто, салон выполнен из добротных материалов, а эргономика водительского места интуитивно поня",
+    "price": "1500.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 25,
+  "fields": {
+    "name": "Jeep Wrangler",
+    "image": "cars/images.jpeg",
+    "description": "Wrangler TJ — это настоящая классика, которая сохранила узнаваемый стиль первого «Виллиса» времен Второй мировой войны. Версия на фото — это классический желтый «короткий» Wrangler, который идеально подходит как для поездок по пляжу с открытым верхом, так и для преодоления сложного рельефа.\r\nСалон автомобиля спартанский и защищен от влаги, что позволяет мыть его прямо из шланга. Модель TJ стала первой в линейке Wrangler, получившей пружинную подвеску (вместо рессор), что значительно улучшило комфорт при езде по обычным дорогам, не лишив машину ее внедорожных способностей",
+    "short_description": "Wrangler TJ — это настоящая классика, которая сохранила узнаваемый стиль первого «Виллиса» времен Второй мировой войны",
+    "price": "7000.00",
+    "quantity": 1,
+    "category": 7
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 26,
+  "fields": {
+    "name": "Mercedes-Benz CL",
+    "image": "cars/Без_названия_1.jpeg",
+    "description": "Mercedes-Benz CL-класса в кузове C216 — это вершина инженерной мысли своего времени. Благодаря тюнингу Lorinser, автомобиль получил более агрессивный и эксклюзивный внешний вид, сохранив при этом статусность. Внутри салон отделан кожей высшего качества и ценными породами дерева. Автомобиль оснащен системой активной подвески Active Body Control (ABC), которая практически исключает крены в поворотах, делая езду максимально плавной. Lorinser также предлагал программы по увеличению мощности двигателя, что позволяет этому тяжелому купе разгоняться до 100 км/ч менее чем за 4.5 секунды",
+    "short_description": "Mercedes-Benz CL-класса в кузове C216 — это вершина инженерной мысли своего времени. Благодаря тюнингу Lorinser, автомобиль получил более агрессивный и эксклюзивный внешний вид, сохранив при этом стат",
+    "price": "7600.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 27,
+  "fields": {
+    "name": "Toyota Tacoma",
+    "image": "cars/Без_названия_2.jpeg",
+    "description": "Toyota Tacoma — один из самых популярных пикапов в мире, известный своей «неубиваемостью». Модель второго поколения получила раму из высокопрочной стали и просторный салон, который по комфорту не уступает внедорожникам. Пикап идеально подходит для перевозки грузов (грузоподъемность около 600–700 кг), буксировки прицепов и серьезных выездов на бездорожье. Версия на фото оснащена внедорожными колесными дисками и расширителями арок, что подчеркивает её утилитарный характер",
+    "short_description": "Toyota Tacoma — один из самых популярных пикапов в мире, известный своей «неубиваемостью»",
+    "price": "6500.00",
+    "quantity": 1,
+    "category": 7
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 28,
+  "fields": {
+    "name": "Lexus GS",
+    "image": "cars/Без_названия_3.jpeg",
+    "description": "Lexus GS (S190) в своё время стал воплощением философии дизайна L-finesse: плавные линии кузова, стремительный силуэт и фирменная «четырехглазая» оптика. Автомобиль отличается превосходной шумоизоляцией и плавностью хода, при этом мощные двигатели позволяют ему конкурировать с немецкими спортивными седанами. Внутри водителя и пассажиров ждет роскошный интерьер с электрорегулировками, вентиляцией сидений и множеством электронных помощников",
+    "short_description": "Lexus GS (S190) в своё время стал воплощением философии дизайна L-finesse: плавные линии кузова, стремительный силуэт и фирменная «четырехглазая» оптика",
+    "price": "3400.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 29,
+  "fields": {
+    "name": "Toyota FCV Concept",
+    "image": "cars/Без_названия_4.jpeg",
+    "description": "Toyota FCV (Fuel Cell Vehicle) — это воплощение экологичного будущего. В отличие от обычных электромобилей, его не нужно заряжать от розетки часами. Энергия вырабатывается прямо на борту в блоке топливных элементов. Дизайн концепта с огромными воздухозаборниками продиктован необходимостью охлаждения системы и подачи воздуха для реакции",
+    "short_description": "Toyota FCV (Fuel Cell Vehicle) — это воплощение экологичного будущего. В отличие от обычных электромобилей, его не нужно заряжать от розетки часами",
+    "price": "7000.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 30,
+  "fields": {
+    "name": "Ford Mustang 6",
+    "image": "cars/Без_названия_5.jpeg",
+    "description": "Шестое поколение Ford Mustang стало по-настоящему глобальным, получив более совершенную управляемость за счет новой платформы. Внешне автомобиль выделяется длинным капотом, коротким багажником и характерными трехполосными задними фонарями",
+    "short_description": "Шестое поколение Ford Mustang стало по-настоящему глобальным, получив более совершенную управляемость за счет новой платформы",
+    "price": "8000.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 31,
+  "fields": {
+    "name": "Subaru Impreza WRX STI",
+    "image": "cars/Без_названия_6.jpeg",
+    "description": "Subaru Impreza WRX STI — это настоящий «боевой» автомобиль, созданный для трека и ралли, но допущенный на дороги общего пользования. Модель на фото имеет элементы тюнинга: карбоновый капот, спортивный аэродинамический обвес и диски золотистого цвета (классика для STI). Благодаря симметричному полному приводу и низкому центру тяжести, машина обладает феноменальной управляемостью на любом покрытии",
+    "short_description": "Subaru Impreza WRX STI — это настоящий «боевой» автомобиль, созданный для трека и ралли, но допущенный на дороги общего пользования",
+    "price": "10000.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 32,
+  "fields": {
+    "name": "Jeep Wrangler",
+    "image": "cars/Без_названия_9.jpeg",
+    "description": "Wrangler JL — это самая технологичная и комфортная итерация модели. В отличие от предыдущих поколений, здесь установлены современная мультимедиа Uconnect, камера заднего вида и системы помощи водителю, при этом машина сохранила конструкцию «танк на колесах». Версия Unlimited (4 двери) предлагает полноценный 5-местный салон и вместительный багажник, что делает её подходящей для длительных экспедиций",
+    "short_description": "Wrangler JL — это самая технологичная и комфортная итерация модели. В отличие от предыдущих поколений, здесь установлены современная мультимедиа Uconnect",
+    "price": "4000.00",
+    "quantity": 1,
+    "category": 7
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 33,
+  "fields": {
+    "name": "Land Rover Defender 110",
+    "image": "cars/Без_названия_10.jpeg",
+    "description": "Defender 110 — это идеальный баланс между экспедиционным автомобилем и комфортным городским кроссовером. В отличие от своего предшественника, новый «Деф» получил несущий кузов из алюминия, что сделало его невероятно жестким и безопасным",
+    "short_description": "Defender 110 — это идеальный баланс между экспедиционным автомобилем и комфортным городским кроссовером",
+    "price": "7300.00",
+    "quantity": 1,
+    "category": 7
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 34,
+  "fields": {
+    "name": "Volkswagen Multivan (T6)",
+    "image": "cars/Без_названия_14.jpeg",
+    "description": "Volkswagen Multivan T6 отличается строгим респектабельным дизайном и высоким качеством отделки. Главное преимущество модели — потрясающая трансформация салона: сиденья второго ряда могут поворачиваться, а задний диван передвигается по рельсам или полностью снимается, превращая салон в мобильный офис или спальное место. Автомобиль оснащен современными системами безопасности, светодиодной оптикой и мультимедиа с поддержкой смартфонов",
+    "short_description": "Volkswagen Multivan T6 отличается строгим респектабельным дизайном и высоким качеством отделки",
+    "price": "7400.00",
+    "quantity": 1,
+    "category": 6
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 35,
+  "fields": {
+    "name": "Mercedes-Benz Metris 2017",
+    "image": "cars/Без_названия_15.jpeg",
+    "description": "Mercedes-Benz Metris 2017 разработан специально для рынка США и Канады как более компактная и маневренная альтернатива модели Sprinter. Автомобиль выделяется отличной эргономикой, высокой грузоподъемностью и современными системами безопасности, включая систему стабилизации при боковом ветре (Crosswind Assist) и систему предотвращения столкновений",
+    "short_description": "Mercedes-Benz Metris 2017 разработан специально для рынка США и Канады как более компактная и маневренная альтернатива модели Sprinter",
+    "price": "7800.00",
+    "quantity": 1,
+    "category": 6
   }
 },
 {
@@ -1490,11 +2236,22 @@
   }
 },
 {
+  "model": "cars.basket",
+  "pk": 68,
+  "fields": {
+    "user": 13,
+    "car": 33,
+    "quantity": 1,
+    "created_timestamp": "2026-03-19T12:07:32.506Z",
+    "status": "active"
+  }
+},
+{
   "model": "users.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$1000000$DBmnibUP0AAzauHwr4unPd$tiK+fjtercOHZEuZ3ywCuWWRp6LVVrhFiTJdqbg9yos=",
-    "last_login": "2026-03-09T13:17:22.987Z",
+    "last_login": "2026-03-23T18:39:25.720Z",
     "is_superuser": true,
     "username": "Rebeka",
     "first_name": "",
@@ -1503,6 +2260,7 @@
     "is_staff": true,
     "is_active": true,
     "date_joined": "2026-02-02T17:10:13.205Z",
+    "phone_number": "",
     "groups": [],
     "user_permissions": []
   }
@@ -1512,15 +2270,16 @@
   "pk": 13,
   "fields": {
     "password": "pbkdf2_sha256$1000000$qQyeDnHY1kelmhOBIOEREh$6H9uSCyIq7vpLLJsTDQGRznpvVUkimU7SahR/Ov5+ns=",
-    "last_login": "2026-03-03T12:19:38.814Z",
+    "last_login": "2026-03-18T17:29:47.864Z",
     "is_superuser": false,
     "username": "User1",
-    "first_name": "фффф",
-    "last_name": "ффф",
+    "first_name": "Alex",
+    "last_name": "Maksim",
     "email": "",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-02-10T17:50:53.712Z",
+    "phone_number": "",
     "groups": [],
     "user_permissions": []
   }
@@ -1539,6 +2298,7 @@
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-02-10T17:51:58.075Z",
+    "phone_number": "",
     "groups": [],
     "user_permissions": []
   }
@@ -1557,6 +2317,7 @@
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-03-08T12:32:11.397Z",
+    "phone_number": "",
     "groups": [],
     "user_permissions": []
   }
